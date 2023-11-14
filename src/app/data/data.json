@@ -1,0 +1,204 @@
+{
+  "items": [
+    {
+      "name": "Laptop",
+      "image": "laptop.jpg",
+      "actualPrice": 899.99,
+      "discountPrice": 799.99,
+      "rating": 4.7,
+      "reviews": 150,
+      "brand": "TechCorp",
+      "isWishlisted": true
+    },
+    {
+      "name": "Smartphone",
+      "image": "smartphone.jpg",
+      "actualPrice": 499.99,
+      "discountPrice": 449.99,
+      "rating": 4.5,
+      "reviews": 120,
+      "brand": "GadgetCo",
+      "isWishlisted": false
+    },
+    {
+      "name": "Coffee Maker",
+      "image": "coffeemaker.jpg",
+      "actualPrice": 69.99,
+      "discountPrice": 59.99,
+      "rating": 4.2,
+      "reviews": 90,
+      "brand": "KitchenTech",
+      "isWishlisted": true
+    },
+    {
+      "name": "Running Shoes",
+      "image": "runningshoes.jpg",
+      "actualPrice": 79.99,
+      "discountPrice": 69.99,
+      "rating": 4.6,
+      "reviews": 110,
+      "brand": "AthleticGear",
+      "isWishlisted": false
+    },
+    {
+      "name": "Headphones",
+      "image": "headphones.jpg",
+      "actualPrice": 129.99,
+      "discountPrice": 109.99,
+      "rating": 4.8,
+      "reviews": 180,
+      "brand": "AudioTech",
+      "isWishlisted": true
+    },
+    {
+      "name": "Backpack",
+      "image": "backpack.jpg",
+      "actualPrice": 49.99,
+      "discountPrice": 39.99,
+      "rating": 4.4,
+      "reviews": 95,
+      "brand": "OutdoorsRUs",
+      "isWishlisted": true
+    },
+    {
+      "name": "Desk Lamp",
+      "image": "desklamp.jpg",
+      "actualPrice": 29.99,
+      "discountPrice": 24.99,
+      "rating": 4.0,
+      "reviews": 70,
+      "brand": "HomeLighting",
+      "isWishlisted": false
+    },
+    {
+      "name": "Gaming Mouse",
+      "image": "gamingmouse.jpg",
+      "actualPrice": 59.99,
+      "discountPrice": 49.99,
+      "rating": 4.5,
+      "reviews": 130,
+      "brand": "GamerGear",
+      "isWishlisted": true
+    },
+    {
+      "name": "Yoga Mat",
+      "image": "yogamat.jpg",
+      "actualPrice": 19.99,
+      "discountPrice": 16.99,
+      "rating": 4.3,
+      "reviews": 85,
+      "brand": "FitnessPro",
+      "isWishlisted": false
+    },
+    {
+      "name": "HD Television",
+      "image": "television.jpg",
+      "actualPrice": 699.99,
+      "discountPrice": 649.99,
+      "rating": 4.9,
+      "reviews": 220,
+      "brand": "EntertainmentCo",
+      "isWishlisted": true
+    },
+    {
+      "name": "Sunglasses",
+      "image": "sunglasses.jpg",
+      "actualPrice": 39.99,
+      "discountPrice": 34.99,
+      "rating": 4.6,
+      "reviews": 100,
+      "brand": "FashionTrends",
+      "isWishlisted": false
+    },
+    {
+      "name": "Tool Set",
+      "image": "toolset.jpg",
+      "actualPrice": 129.99,
+      "discountPrice": 109.99,
+      "rating": 4.2,
+      "reviews": 80,
+      "brand": "HomeImprovement",
+      "isWishlisted": true
+    },
+    {
+      "name": "Portable Speaker",
+      "image": "portablespeaker.jpg",
+      "actualPrice": 79.99,
+      "discountPrice": 69.99,
+      "rating": 4.5,
+      "reviews": 110,
+      "brand": "AudioTech",
+      "isWishlisted": true
+    },
+    {
+      "name": "Digital Camera",
+      "image": "digitalcamera.jpg",
+      "actualPrice": 349.99,
+      "discountPrice": 299.99,
+      "rating": 4.7,
+      "reviews": 180,
+      "brand": "PhotographyGear",
+      "isWishlisted": false
+    },
+    {
+      "name": "Cookware Set",
+      "image": "cookwareset.jpg",
+      "actualPrice": 89.99,
+      "discountPrice": 79.99,
+      "rating": 4.4,
+      "reviews": 120,
+      "brand": "KitchenEssentials",
+      "isWishlisted": false
+    },
+    {
+      "name": "Fitness Tracker",
+      "image": "fitnesstracker.jpg",
+      "actualPrice": 49.99,
+      "discountPrice": 39.99,
+      "rating": 4.0,
+      "reviews": 70,
+      "brand": "HealthTech",
+      "isWishlisted": true
+    },
+    {
+      "name": "Wireless Keyboard",
+      "image": "wirelesskeyboard.jpg",
+      "actualPrice": 39.99,
+      "discountPrice": 29.99,
+      "rating": 4.6,
+      "reviews": 100,
+      "brand": "TechGear",
+      "isWishlisted": false
+    },
+    {
+      "name": "Travel Backpack",
+      "image": "travelbackpack.jpg",
+      "actualPrice": 59.99,
+      "discountPrice": 49.99,
+      "rating": 4.2,
+      "reviews": 80,
+      "brand": "OutdoorsRUs",
+      "isWishlisted": true
+    },
+    {
+      "name": "Air Purifier",
+      "image": "airpurifier.jpg",
+      "actualPrice": 149.99,
+      "discountPrice": 129.99,
+      "rating": 4.8,
+      "reviews": 150,
+      "brand": "HomeWellness",
+      "isWishlisted": false
+    },
+    {
+      "name": "Wireless Earbuds",
+      "image": "wirelessearbuds.jpg",
+      "actualPrice": 89.99,
+      "discountPrice": 79.99,
+      "rating": 4.5,
+      "reviews": 110,
+      "brand": "AudioTech",
+      "isWishlisted": true
+    }
+  ]
+}
