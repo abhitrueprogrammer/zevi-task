@@ -21,3 +21,21 @@ export function selectRandomItems<T>(array: T[], num: number): T[] {
 
   return randomItems;
 }
+
+export function getStarsArray(rating: number) {
+  const fullStars = Math.floor(rating);
+  const starArr = [];
+
+  for (let i = 1; i <= fullStars; i++) {
+    starArr.push(1);
+  }
+
+  if (rating < 5) {
+    const emptyStars = 5 - starArr.length;
+    for (let i = 1; i <= emptyStars; i++) {
+      starArr.push(0);
+    }
+  }
+
+  return starArr;
+}
