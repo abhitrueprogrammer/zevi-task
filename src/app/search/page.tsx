@@ -77,9 +77,6 @@ export default function Home() {
     setFilteredData(temp);
   }, [filters]);
 
-  useEffect(() => {
-    console.log(hovered);
-  }, [hovered]);
 
   return (
     <main className="flex flex-col min-h-screen p-8 items-center">
