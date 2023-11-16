@@ -3,8 +3,8 @@
     {
       "name": "Laptop",
       "image": "laptop.jpg",
-      "actualPrice": 899.99,
-      "discountPrice": 799.99,
+      "actualPrice": 1299.99,
+      "discountPrice": 1099.99,
       "rating": 1.7,
       "reviews": 150,
       "brand": "H&M",
