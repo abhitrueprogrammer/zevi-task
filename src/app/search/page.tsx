@@ -10,12 +10,14 @@ import { useSearchParams } from "next/navigation";
 import SearchBar from "@/components/search-bar";
 import Stars from "@/components/stars";
 import { Filters } from "@/components/filters";
+import { Heart } from "lucide-react";
 
 export default function Home() {
   const searchParams = useSearchParams();
   const query = searchParams.get("q");
   const [data, setData] = useState<Item[]>([]);
   const [filteredData, setFilteredData] = useState<Item[]>([]);
+  const [hovered, setHovered] = useState<number>(-1);
   const [filters, setFilters] = useState<Filters>({
     mango: false,
     hm: false,
@@ -75,6 +77,10 @@ export default function Home() {
     setFilteredData(temp);
   }, [filters]);
 
+  useEffect(() => {
+    console.log(hovered);
+  }, [hovered]);
+
   return (
     <main className="flex flex-col min-h-screen p-8 items-center">
       <Image src={logo} alt="logo" className="absolute top-5 right-10" />
@@ -88,7 +94,21 @@ export default function Home() {
               <div
                 key={index}
                 className="flex flex-col items-start relative text-lg"
+                onMouseOver={() => setHovered(index)}
+                onMouseLeave={() => setHovered(-1)}
               >
+                <Heart
+                  className={`absolute top-2 right-2 cursor-pointer ${
+                    item.isWishlisted
+                      ? "text-red-500 fill-red-500"
+                      : "text-white"
+                  }`}
+                  onClick={() => {
+                    const temp = [...data];
+                    temp[index].isWishlisted = !temp[index].isWishlisted;
+                    setData(temp);
+                  }}
+                />
                 <Image
                   src="https://source.unsplash.com/random"
                   alt="item"
@@ -96,6 +116,13 @@ export default function Home() {
                   width={239}
                   className="pb-2"
                 />
+                <div
+                  className={`bg-[#6d84ffb5]  absolute w-full p-2 text-center text-white cursor-pointer duration-700 ${
+                    hovered === index ? "top-[315px]" : "z-[-1] top-[335px] bg-white"
+                  }`}
+                >
+                  View Product
+                </div>
                 <p className="font-semibold">{item.name}</p>
                 <p>
                   <s className="text-muted-foreground font-light">{`Rs. ${item.actualPrice}`}</s>
