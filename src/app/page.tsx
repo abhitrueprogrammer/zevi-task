@@ -1,85 +1,126 @@
+"use client";
 import Image from "next/image";
+import { useState, useEffect, useRef } from "react";
 
 export default function Home() {
-  return (
-    <main className="flex no-scrollbar flex-col items-center justify-center min-h-screen bg-gray-200 p-4">
-      {/* Phone Frame */}
-      <div className="relative mx-auto border-gray-800 dark:border-gray-800 bg-gray-800 border-[14px] rounded-[2.5rem] h-[800px] w-[400px] shadow-xl">
-        {/* Notch */}
-        <div className="w-[140px] h-[18px] bg-gray-800 top-0 rounded-b-[1rem] left-1/2 -translate-x-1/2 absolute"></div>
-        
-        {/* Screen */}
-        <div className="rounded-[2rem] no-scrollbar overflow-y-auto scrollbar-hide h-full bg-gray-50 font-serif text-gray-800">
-          <div className="p-8 space-y-12">
-        
-            {/* Hero Section */}
-            <section className="text-center">
-              <h1 className="text-4xl font-bold text-rose-500 mb-4">Our Wedding</h1>
-              <p className="text-md italic">
-                Raise your glasses, Join us in happiness, laughter, and light!
-                <br />
-                It’s a feast of love, a fabulous delight— And you, my dear friend, make it just right.
-              </p>
-              <div className="my-6">
-                {/* Placeholder for Ghibli-style image */}
-                <div className="w-full h-48 bg-gray-200 rounded-lg flex items-center justify-center">
-                  <span className="text-gray-500 text-sm">Ghibli-style image</span>
-                </div>
-              </div>
-              <div className="flex flex-col items-center text-sm my-4 space-y-2">
-                <span>🍷 “Come support the couple!”</span>
-                <span>🍽️ “Let’s feast together!”</span>
-                <span>🥂 “Cheers to a thousand toasts!”</span>
-              </div>
-              <p className="text-xl font-semibold text-rose-500">
-                ESHWAR K MANASIJAN 💖 TEJASHWINI HARISH
-              </p>
-            </section>
+  const [isMobile, setIsMobile] = useState(false);
+  const scrollRef = useRef<HTMLDivElement>(null);
 
-            {/* Invitation Section */}
-            <section className="text-center">
-              <h2 className="text-2xl font-bold mb-4">- INVITATION -</h2>
-              <div className="flex justify-center items-center space-x-2 my-4">
-                 {/* Placeholder for cartoon faces */}
-                <div className="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center"><span className="text-gray-500 text-xs">Groom</span></div>
-                <span className="text-3xl">🌸</span>
-                <div className="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center"><span className="text-gray-500 text-xs">Bride</span></div>
-              </div>
-              <p className="text-md italic">
-                💌
-                <br />
-                In this lifetime, what a joy it’s been for paths we have crossed and the conversations we have shared.
-                We warmly invite you and those you hold dear.
-                It’s been a while so let this day be, to witness our vows and bring us cheer, a sweet reunion indeed.
-              </p>
-            </section>
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768); // Typical breakpoint for mobile
+    };
 
-            {/* Schedule Section */}
-            <section>
-              <h2 className="text-2xl font-bold text-center mb-4">THE EXALTED DAYS</h2>
-              <div className="grid grid-cols-1 gap-6 text-sm">
-                <div className="border-l-4 border-rose-300 pl-4">
-                  <h3 className="text-xl font-semibold mb-2">15th November</h3>
-                  <ul className="space-y-1">
-                    <li><span className="font-bold">04:00pm</span> - Onset of the event</li>
-                    <li><span className="font-bold">04:45pm - 05:45pm</span> - Engagement</li>
-                    <li><span className="font-bold">6.00pm</span> – Reception</li>
-                    <li><span className="font-bold">7:00 pm</span> – Celebration Banquet</li>
-                  </ul>
-                </div>
-                <div className="border-l-4 border-rose-300 pl-4">
-                  <h3 className="text-xl font-semibold mb-2">16th November</h3>
-                  <ul className="space-y-1">
-                    <li><span className="font-bold">From 07:45</span> - Breakfast</li>
-                    <li><span className="font-bold">10:45 am - 11:45 am</span> – Muhurtham</li>
-                    <li><span className="font-bold">12:30</span> – Lunch</li>
-                  </ul>
-                </div>
-              </div>
-            </section>
+    handleResize(); // Set initial state
+    window.addEventListener("resize", handleResize);
 
-            {/* Poem Section */}
-            <section className="text-center italic text-md">
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  useEffect(() => {
+    const scrollElement = scrollRef.current;
+    if (!scrollElement) return;
+
+    let intervalId: NodeJS.Timeout;
+
+    const startScrolling = () => {
+      intervalId = setInterval(() => {
+        if (scrollElement.scrollTop + scrollElement.clientHeight >= scrollElement.scrollHeight - 5) {
+          scrollElement.scrollTo({ top: 0, behavior: 'smooth' });
+        } else {
+          scrollElement.scrollBy({ top: 1, behavior: 'smooth' });
+        }
+      }, 0);
+    };
+
+    const stopScrolling = () => {
+      clearInterval(intervalId);
+    };
+
+    scrollElement.addEventListener('mouseenter', stopScrolling);
+    scrollElement.addEventListener('mouseleave', startScrolling);
+    scrollElement.addEventListener('touchstart', stopScrolling);
+    scrollElement.addEventListener('touchend', startScrolling);
+
+    startScrolling();
+
+    return () => {
+      clearInterval(intervalId);
+      scrollElement.removeEventListener('mouseenter', stopScrolling);
+      scrollElement.removeEventListener('mouseleave', startScrolling);
+      scrollElement.removeEventListener('touchstart', stopScrolling);
+      scrollElement.removeEventListener('touchend', startScrolling);
+    };
+  }, [isMobile]); // Re-run effect if view changes
+
+  const weddingContent = (
+    <div className="p-8 space-y-12">
+      {/* Hero Section */}
+      <section className="text-center">
+        <h1 className="text-4xl font-bold text-rose-500 mb-4">Our Wedding</h1>
+        <p className="text-md italic">
+          Raise your glasses, Join us in happiness, laughter, and light!
+          <br />
+          It’s a feast of love, a fabulous delight— And you, my dear friend, make it just right.
+        </p>
+        <div className="my-6">
+          <div className="w-full h-48 bg-gray-200 rounded-lg flex items-center justify-center">
+            <span className="text-gray-500 text-sm">Ghibli-style image</span>
+          </div>
+        </div>
+        <div className="flex flex-col items-center text-sm my-4 space-y-2">
+          <span>🍷 “Come support the couple!”</span>
+          <span>🍽️ “Let’s feast together!”</span>
+          <span>🥂 “Cheers to a thousand toasts!”</span>
+        </div>
+        <p className="text-xl font-semibold text-rose-500">
+          ESHWAR K MANASIJAN 💖 TEJASHWINI HARISH
+        </p>
+      </section>
+
+      {/* Invitation Section */}
+      <section className="text-center">
+        <h2 className="text-2xl font-bold mb-4">- INVITATION -</h2>
+        <div className="flex justify-center items-center space-x-2 my-4">
+          <div className="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center"><span className="text-gray-500 text-xs">Groom</span></div>
+          <span className="text-3xl">🌸</span>
+          <div className="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center"><span className="text-gray-500 text-xs">Bride</span></div>
+        </div>
+        <p className="text-md italic">
+          💌
+          <br />
+          In this lifetime, what a joy it’s been for paths we have crossed and the conversations we have shared.
+          We warmly invite you and those you hold dear.
+          It’s been a while so let this day be, to witness our vows and bring us cheer, a sweet reunion indeed.
+        </p>
+      </section>
+
+      {/* Schedule Section */}
+      <section>
+        <h2 className="text-2xl font-bold text-center mb-4">THE EXALTED DAYS</h2>
+        <div className="grid grid-cols-1 gap-6 text-sm">
+          <div className="border-l-4 border-rose-300 pl-4">
+            <h3 className="text-xl font-semibold mb-2">15th November</h3>
+            <ul className="space-y-1">
+              <li><span className="font-bold">04:00pm</span> - Onset of the event</li>
+              <li><span className="font-bold">04:45pm - 05:45pm</span> - Engagement</li>
+              <li><span className="font-bold">6.00pm</span> – Reception</li>
+              <li><span className="font-bold">7:00 pm</span> – Celebration Banquet</li>
+            </ul>
+          </div>
+          <div className="border-l-4 border-rose-300 pl-4">
+            <h3 className="text-xl font-semibold mb-2">16th November</h3>
+            <ul className="space-y-1">
+              <li><span className="font-bold">From 07:45</span> - Breakfast</li>
+              <li><span className="font-bold">10:45 am - 11:45 am</span> – Muhurtham</li>
+              <li><span className="font-bold">12:30</span> – Lunch</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* ... more sections ... */}
+       <section className="text-center italic text-md">
               <p>
                 A wedding promise both gentle and grand,
                 <br />
@@ -194,9 +235,23 @@ export default function Home() {
                     </p>
                 </div>
             </section>
+    </div>
+  );
+
+  return (
+    <main className="flex flex-col items-center justify-center min-h-screen bg-gray-200 p-4">
+      {isMobile ? (
+        <div ref={scrollRef} className="no-scrollbar overflow-y-auto scrollbar-hide h-screen w-full bg-gray-50 font-serif text-gray-800">
+          {weddingContent}
+        </div>
+      ) : (
+        <div className="relative mx-auto border-gray-800 dark:border-gray-800 bg-gray-800 border-[14px] rounded-[2.5rem] h-[800px] w-[400px] shadow-xl">
+          <div className="w-[140px] h-[18px] bg-gray-800 top-0 rounded-b-[1rem] left-1/2 -translate-x-1/2 absolute"></div>
+          <div ref={scrollRef} className="rounded-[2rem] no-scrollbar overflow-y-auto scrollbar-hide h-full bg-gray-50 font-serif text-gray-800">
+            {weddingContent}
           </div>
         </div>
-      </div>
+      )}
     </main>
   );
 }
