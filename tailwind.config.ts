@@ -15,6 +15,9 @@ module.exports = {
       },
     },
     extend: {
+      backgroundImage: {
+        'home': "url('/Home.png')",
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -69,10 +72,7 @@ module.exports = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
-      backgroundImage:{
-        'home': "url('/Home.png')",
-      },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [require("tailwindcss-animate"), require('tailwind-scrollbar-hide')],
 }
