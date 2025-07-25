@@ -178,7 +178,7 @@ export default function Home() {
                         <input type="tel" id="telephone" name="telephone" className="mt-1 block w-full px-2 py-1 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-emerald-500 focus:border-emerald-500"/>
                     </div>
                     <div>
-                        <label htmlFor="pax" className="block text-xs font-medium text-gray-700">Pax</label>
+                        <label htmlFor="pax" className="block text-xs font-medium text-gray-700">No. of people:</label>
                         <input type="number" id="pax" name="pax" min="1" className="mt-1 block w-full px-2 py-1 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-emerald-500 focus:border-emerald-500"/>
                     </div>
                     <div className="text-center pt-2">
