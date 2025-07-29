@@ -16,6 +16,7 @@
     "axios": "^1.8.2",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
+    "framer-motion": "^12.23.11",
     "google-auth-library": "^10.1.0",
     "googleapis": "^154.0.0",
     "lucide-react": "^0.292.0",
