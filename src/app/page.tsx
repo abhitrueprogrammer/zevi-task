@@ -103,9 +103,14 @@ export default function Home() {
           It’s a feast of love, a fabulous delight— And you, my dear friend, make it just right.
         </p>
         <div className="my-6">
-          <div className="w-full h-48 bg-green-200 rounded-lg flex items-center justify-center">
-            <span className="text-gray-500 text-sm">Ghibli-style image</span>
-          </div>
+          <Image
+            src="/ghibli_1.png"
+            alt="Ghibli-style wedding image"
+            width={400}
+            height={192}
+            className="w-full h-48 object-cover rounded-lg shadow-lg border border-emerald-200"
+            priority
+          />
         </div>
         <div className="flex flex-col items-center text-sm my-4 space-y-2">
           <span>🍷 “Come support the couple!”</span>
@@ -302,10 +307,14 @@ export default function Home() {
       {/* Image and Quote Section */}
       <motion.section className="text-center" {...fadeInRight}>
         <div className="my-6">
-          {/* Placeholder for another image */}
-          <div className="w-full h-32 bg-green-200 rounded-lg flex items-center justify-center">
-            <span className="text-gray-500">Image Placeholder</span>
-          </div>
+          <Image
+            src="/ghibli_2.png"
+            alt="Ghibli-style wedding image"
+            width={400}
+            height={128}
+            className="w-full h-32 object-cover rounded-lg shadow-lg border border-emerald-200"
+            priority
+          />
         </div>
         <p className="italic text-md">
           We met through life—
