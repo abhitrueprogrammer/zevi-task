@@ -81,7 +81,22 @@ export default function Home() {
     <div className="p-8 space-y-12">
       {/* Hero Section */}
       <motion.section className="text-center" {...fadeInDown}>
-        <h1 className="text-5xl font-extrabold text-emerald-600 mb-4 fancy-font">Our Wedding</h1>
+        <div className="flex flex-col items-center">
+          <Image
+            src="/wedding_image.png"
+            alt="Wedding Image"
+            width={120}
+            height={120}
+            className="mb-2 rounded-full border border-emerald-300"
+            style={{
+              boxShadow: '0 0 0 16px rgba(255,255,255,0.7), 0 4px 32px 0 rgba(52,211,153,0.15)',
+              WebkitMaskImage: 'radial-gradient(circle, white 70%, transparent 100%)',
+              maskImage: 'radial-gradient(circle, white 70%, transparent 100%)',
+            }}
+            priority
+          />
+          <h1 className="text-5xl font-extrabold text-emerald-600 mb-4 fancy-font">Our Wedding</h1>
+        </div>
         <p className="text-md italic">
           Raise your glasses, Join us in happiness, laughter, and light!
           <br />
