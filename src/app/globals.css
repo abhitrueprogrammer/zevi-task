@@ -1,3 +1,14 @@
+/* Fancy font import */
+@font-face {
+  font-family: 'Fancy';
+  src: url('/fonts/fancy.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body, .fancy-font {
+  font-family: 'Fancy', serif;
+}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

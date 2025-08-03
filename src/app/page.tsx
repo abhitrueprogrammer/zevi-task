@@ -81,7 +81,7 @@ export default function Home() {
     <div className="p-8 space-y-12">
       {/* Hero Section */}
       <motion.section className="text-center" {...fadeInDown}>
-        <h1 className="text-4xl font-bold text-emerald-600 mb-4">Our Wedding</h1>
+        <h1 className="text-5xl font-extrabold text-emerald-600 mb-4 fancy-font">Our Wedding</h1>
         <p className="text-md italic">
           Raise your glasses, Join us in happiness, laughter, and light!
           <br />
@@ -127,11 +127,13 @@ export default function Home() {
         </p>
       </motion.section>
 
+
       {/* Schedule Section */}
       <motion.section {...fadeInLeft}>
         <h2 className="text-2xl font-bold text-center mb-4">THE EXALTED DAYS</h2>
-        <div className="grid grid-cols-1 gap-6 text-sm">
-          <div className="border-l-4 border-emerald-300 pl-4">
+        <div className="flex flex-row justify-center items-center gap-2 w-full">
+          {/* Left: 15th November */}
+          <div className="flex-1 text-left border-l-4 border-emerald-300 pl-4">
             <h3 className="text-xl font-semibold mb-2">15th November</h3>
             <ul className="space-y-1">
               <li><span className="font-bold">04:00pm</span> - Onset of the event</li>
@@ -140,7 +142,21 @@ export default function Home() {
               <li><span className="font-bold">7:00 pm</span> – Celebration Banquet</li>
             </ul>
           </div>
-          <div className="border-l-4 border-emerald-300 pl-4">
+          {/* Center: Decorative SVG */}
+          <div className="flex flex-col items-center justify-center px-2">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <ellipse cx="20" cy="20" rx="18" ry="8" fill="#A7F3D0" />
+              <path d="M20 10 Q22 18 28 18 Q24 22 20 18 Q16 22 12 18 Q18 18 20 10" fill="#34D399" />
+              <circle cx="20" cy="20" r="3" fill="#FBBF24" />
+            </svg>
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <ellipse cx="16" cy="16" rx="14" ry="6" fill="#FDE68A" />
+              <path d="M16 8 Q18 14 22 14 Q19 17 16 14 Q13 17 10 14 Q14 14 16 8" fill="#F59E42" />
+              <circle cx="16" cy="16" r="2" fill="#34D399" />
+            </svg>
+          </div>
+          {/* Right: 16th November */}
+          <div className="flex-1 text-right border-r-4 border-emerald-300 pr-4">
             <h3 className="text-xl font-semibold mb-2">16th November</h3>
             <ul className="space-y-1">
               <li><span className="font-bold">From 07:45</span> - Breakfast</li>
@@ -150,6 +166,18 @@ export default function Home() {
           </div>
         </div>
       </motion.section>
+
+      {/* Calendar Image Section */}
+      <div className="flex justify-center my-6">
+        <Image
+          src="/november-calendar.png"
+          alt="November 2025 Wedding Calendar"
+          width={300}
+          height={450}
+          className="rounded-lg shadow-lg border border-emerald-200"
+          priority
+        />
+      </div>
 
       {/* Poem Section */}
       <motion.section className="text-center italic text-md" {...fadeInRight}>
@@ -166,19 +194,27 @@ export default function Home() {
 
       {/* Map Section */}
       <motion.section className="text-center" {...zoomIn}>
-        <p className="mb-2 text-sm">[Click map for navigation↓]</p>
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1942.8048368218504!2d77.55069544663627!3d13.123895771301079!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae23065976ae59%3A0xae11679cdf28877f!2sSamavana!5e0!3m2!1sen!2sin!4v1753374008739!5m2!1sen!2sin"
-          className="w-full h-64 rounded-lg"
-          style={{ border: 0 }}
-          allowFullScreen={true}
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-        ></iframe>
+        <p className="mb-2 text-sm">[Tap or click the map for navigation↓]</p>
+        <a
+          href="https://goo.gl/maps/2wQwQwQwQwQwQwQw7" // Replace with actual venue link
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ display: 'inline-block', width: '100%' }}
+        >
+          <Image
+            src="/hand-drawn-map.png"
+            alt="Hand-drawn map to venue"
+            width={400}
+            height={600}
+            className="w-full h-64 object-contain rounded-lg shadow-lg cursor-pointer border-2 border-emerald-300"
+            style={{ background: '#fff' }}
+            priority
+          />
+        </a>
       </motion.section>
 
       {/* Second Poem Section */}
-      <motion.section className="text-center italic text-md" {...fadeInUpDelay}>
+      <motion.section className="text-center italic text-md" {...fadeInRight}>
         <p>
           True, gentle, fated, and timeless —
           <br />
@@ -193,7 +229,7 @@ export default function Home() {
       </motion.section>
 
       {/* RSVP Section */}
-      <motion.section {...fadeInUpSpring}>
+      <motion.section {...fadeInRight}>
         <h2 className="text-2xl font-bold text-center mb-4">RSVP</h2>
         <p className="text-center mb-4 text-sm">Kindly RSVP by Nov 1st, 2025</p>
         <form
@@ -249,7 +285,7 @@ export default function Home() {
       </motion.section>
 
       {/* Image and Quote Section */}
-      <motion.section className="text-center" {...fadeInRotate}>
+      <motion.section className="text-center" {...fadeInRight}>
         <div className="my-6">
           {/* Placeholder for another image */}
           <div className="w-full h-32 bg-green-200 rounded-lg flex items-center justify-center">
@@ -269,46 +305,28 @@ export default function Home() {
         </p>
       </motion.section>
 
-      {/* Gift Registry Section */}
-      <motion.section
-        className="text-sm"
-        variants={{
-          hidden: { opacity: 0, y: 40 },
-          show: {
-            opacity: 1,
-            y: 0,
-            transition: {
-              staggerChildren: 0.18,
-              delayChildren: 0.1,
-              duration: 0.7,
-              ease: "easeOut",
-            },
-          },
-        }}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true, amount: 0.2 }}
-      >
-        <motion.h2 className="text-2xl font-bold text-center mb-4" variants={{ hidden: { opacity: 0, y: 30 }, show: { opacity: 1, y: 0, transition: { duration: 0.5 } } }}>GIFT REGISTRY</motion.h2>
-        <motion.div className="text-left space-y-4" variants={{ hidden: {}, show: { transition: { staggerChildren: 0.12 } } }}>
-          <motion.p variants={{ hidden: { opacity: 0, y: 20 }, show: { opacity: 1, y: 0, transition: { duration: 0.5 } } }}>
+      {/* Gift Registry Section - fade in each subsection */}
+      <motion.section className="text-sm" {...staggerContainer}>
+        <motion.h2 className="text-2xl font-bold text-center mb-4" {...fadeInRight}>GIFT REGISTRY</motion.h2>
+        <div className="text-left space-y-4 leading-relaxed">
+          <motion.p {...fadeInRight}>
             Dear Family &amp; Friends,<br />
             Your presence is the most precious gift we could ask for. But if you wish to bless us with something extra, we&apos;ve put together a thoughtful gift registry. Each option is meaningful to us, rooted in tradition, growth, and heartfelt memories. We&apos;ve grouped everything into three broad categories so feel free to choose what resonates most with you.
           </motion.p>
-          <motion.div variants={{ hidden: { opacity: 0, x: -30 }, show: { opacity: 1, x: 0, transition: { duration: 0.5 } } }}>
+          <motion.div {...fadeInRight}>
             <h3 className="text-lg font-semibold mb-1">Invest in Us</h3>
             <p>Digital gifting (gold):</p>
             <ul className="list-disc list-inside ml-4 text-xs">
-              <li>Register on a site of your choice.</li>
+              <li><a href="https://www.caratlane.com/caratlane-digital-gold?srsltid=AfmBOoqcyKK0Gh8cFi2qbf8CT1CH1SLzQ5U7-dBGOZfXxhNl6U5C7JGw" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:underline">Click here to gift digital gold</a></li>
               <li>Go to the gifting section.</li>
               <li>Use recipient address: 7550334997</li>
             </ul>
           </motion.div>
-          <motion.div variants={{ hidden: { opacity: 0, x: 30 }, show: { opacity: 1, x: 0, transition: { duration: 0.5 } } }}>
+          <motion.div {...fadeInRight}>
             <h3 className="text-lg font-semibold mb-1">Gift with Tradition</h3>
             <p>If you prefer to bless us with a precious metal or cash gift, we deeply appreciate it. You can hand it over during the event.</p>
           </motion.div>
-          <motion.div variants={{ hidden: { opacity: 0, y: 30 }, show: { opacity: 1, y: 0, transition: { duration: 0.5 } } }}>
+          <motion.div {...fadeInRight}>
             <h3 className="text-lg font-semibold mb-1">Gift from the Heart</h3>
             <p>Share your blessings & memories.</p>
             <textarea
@@ -319,11 +337,8 @@ export default function Home() {
               placeholder="Your message..."
             ></textarea>
             <div className="text-right pt-2">
-              <motion.button
+              <button
                 type="button"
-                whileTap={{ scale: 0.92 }}
-                whileHover={{ scale: 1.06 }}
-                transition={{ type: "spring", stiffness: 300, damping: 15 }}
                 onClick={() => {
                   const message = (document.getElementById("message") as HTMLTextAreaElement).value;
                   const promise = fetch("/api/rsvp", {
@@ -356,41 +371,60 @@ export default function Home() {
                 className="px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-emerald-500 hover:bg-emerald-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500"
               >
                 Send
-              </motion.button>
+              </button>
             </div>
           </motion.div>
-          <motion.div variants={{ hidden: { opacity: 0, x: -30 }, show: { opacity: 1, x: 0, transition: { duration: 0.5 } } }}>
+          <motion.div {...fadeInRight}>
             <h3 className="text-lg font-semibold mb-1">Something Personal or Handmade?</h3>
             <p>Have something special, handmade, or meaningful? We’d love to receive it—there’s space in our hearts and home for all your love.</p>
           </motion.div>
-          <motion.p className="text-left pt-4" variants={{ hidden: { opacity: 0, y: 20 }, show: { opacity: 1, y: 0, transition: { duration: 0.5 } } }}>
+          <motion.p className="text-left pt-4" {...fadeInRight}>
             Thank you for being a part of this beautiful journey with us. Whether it’s your blessings, your presence, or a thoughtful contribution, we are truly grateful. This celebration is as much about family and friendship as it is about the two of us and your support means everything.
           </motion.p>
-          <motion.p className="text-center font-semibold text-md" variants={{ hidden: { opacity: 0, scale: 0.8 }, show: { opacity: 1, scale: 1, transition: { duration: 0.5 } } }}>
+          <motion.p className="text-center font-semibold text-md" {...fadeInRight}>
             With love,
             <br/>
             The-soon-to-be Mister and Missus
           </motion.p>
-        </motion.div>
+        </div>
       </motion.section>
     </div>
   );
 
   return (
-    <main className="flex flex-col items-center justify-center min-h-screen bg-green-100 p-4">
-      <Toaster />
-      {isMobile ? (
-        <div className="no-scrollbar overflow-y-auto scrollbar-hide h-screen w-full bg-lime-50 font-serif text-gray-800">
-          {weddingContent}
-        </div>
-      ) : (
-        <div className="relative mx-auto border-gray-800 dark:border-gray-800 bg-gray-800 border-[14px] rounded-[2.5rem] h-[800px] w-[400px] shadow-xl">
-          <div className="w-[140px] h-[18px] bg-gray-800 top-0 rounded-b-[1rem] left-1/2 -translate-x-1/2 absolute"></div>
-          <div className="rounded-[2rem] no-scrollbar overflow-y-auto scrollbar-hide h-full bg-lime-50 font-serif text-gray-800">
+    <main
+      className="flex flex-col items-center justify-center min-h-screen p-4"
+      style={{
+        backgroundImage: 'url(/floral-background.jpg)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        position: 'relative',
+      }}
+    >
+      <div
+        style={{
+          position: 'absolute',
+          inset: 0,
+          background: 'rgba(255,255,255,0.7)',
+          zIndex: 0,
+        }}
+      />
+      <div style={{ position: 'relative', zIndex: 1, width: '100%' }}>
+        <Toaster />
+        {isMobile ? (
+          <div className="no-scrollbar overflow-y-auto scrollbar-hide h-screen w-full bg-lime-50 font-serif text-gray-800">
             {weddingContent}
           </div>
-        </div>
-      )}
+        ) : (
+          <div className="relative mx-auto border-gray-800 dark:border-gray-800 bg-gray-800 border-[14px] rounded-[2.5rem] h-[800px] w-[400px] shadow-xl">
+            <div className="w-[140px] h-[18px] bg-gray-800 top-0 rounded-b-[1rem] left-1/2 -translate-x-1/2 absolute"></div>
+            <div className="rounded-[2rem] no-scrollbar overflow-y-auto scrollbar-hide h-full bg-lime-50 font-serif text-gray-800">
+              {weddingContent}
+            </div>
+          </div>
+        )}
+      </div>
     </main>
   );
 }
