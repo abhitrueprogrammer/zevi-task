@@ -329,6 +329,13 @@ export default function Home() {
           <motion.div {...fadeInRight}>
             <h3 className="text-lg font-semibold mb-1">Gift from the Heart</h3>
             <p>Share your blessings & memories.</p>
+            <input
+              type="text"
+              id="gift-message-name"
+              name="gift-message-name"
+              className="mt-1 block w-full px-2 py-1 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-emerald-500 focus:border-emerald-500"
+              placeholder="Your name (optional)"
+            />
             <textarea
               id="message"
               name="message"
@@ -340,6 +347,8 @@ export default function Home() {
               <button
                 type="button"
                 onClick={() => {
+                  const nameInput = document.getElementById("gift-message-name") as HTMLInputElement;
+                  const name = nameInput && nameInput.value.trim() ? nameInput.value.trim() : "Anonymous";
                   const message = (document.getElementById("message") as HTMLTextAreaElement).value;
                   const promise = fetch("/api/rsvp", {
                     method: "POST",
@@ -347,7 +356,7 @@ export default function Home() {
                       "Content-Type": "application/json",
                     },
                     body: JSON.stringify({
-                      name: "Anonymous",
+                      name,
                       telephone: "N/A",
                       pax: 0,
                       message,
@@ -363,6 +372,7 @@ export default function Home() {
                     loading: "Sending message...",
                     success: () => {
                       (document.getElementById("message") as HTMLTextAreaElement).value = "";
+                      if (nameInput) nameInput.value = "";
                       return "Message sent successfully!";
                     },
                     error: "Failed to send message.",
