@@ -453,7 +453,7 @@ export default function Home() {
             {weddingContent}
           </div>
         ) : (
-          <div className="relative mx-auto border-gray-800 dark:border-gray-800 bg-gray-800 border-[14px] rounded-[2.5rem] h-[800px] w-[400px] shadow-xl">
+          <div className="relative mx-auto border-gray-800 dark:border-gray-800 bg-gray-800 border-[14px] rounded-full h-[800px] w-[400px] shadow-xl">
             <div className="w-[140px] h-[18px] bg-gray-800 top-0 rounded-b-[1rem] left-1/2 -translate-x-1/2 absolute"></div>
             <div className="rounded-[2rem] no-scrollbar overflow-y-auto scrollbar-hide h-full bg-lime-50 font-serif text-gray-800">
               {weddingContent}
