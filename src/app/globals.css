@@ -21,6 +21,17 @@ body, .Edu-font {
   font-family: 'Edu', serif;
 }
 
+@font-face {
+  font-family: 'BeauRivage';
+  src: url('/fonts/BeauRivage-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body, .BeauRivage-font {
+  font-family: 'BeauRivage', serif;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

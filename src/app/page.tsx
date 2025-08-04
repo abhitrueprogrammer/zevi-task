@@ -83,11 +83,12 @@ export default function Home() {
       <motion.section className="text-center" {...fadeInDown}>
         <div className="flex flex-col items-center">
           <Image
-            src="/our-wedding.png"
+            src="/final-images/foot-final.png"
             alt="Wedding Image"
             width={150}
             height={150}
-            className="mt-4 mb-4 rounded-full border border-emerald-300"
+            className="mt-4 mb-4 w-40 object-cover rounded-full shadow-lg border border-emerald-300"
+            
             style={{
               boxShadow: '0 0 0 16px rgba(255,255,255,0.7), 0 4px 32px 0 rgba(52,211,153,0.15)',
               WebkitMaskImage: 'radial-gradient(circle, white 70%, transparent 100%)',
@@ -104,50 +105,65 @@ export default function Home() {
           <br />
           And you, my dear friend, make it just right!
         </p>
-        <div className="my-6">
+        <div className="my-2">
           <Image
-            src="/ghibli_1.png"
+            src="/final-images/engagement-final.png"
             alt="Ghibli-style wedding image"
             width={400}
             height={192}
-            className="w-full h-48 object-cover rounded-lg shadow-lg border border-emerald-200"
+            className="scale-90 object-cover rounded-lg shadow-lg border border-emerald-200"
             priority
           />
         </div>
+        {/*
         <div className="flex flex-col items-center text-sm my-4 space-y-2">
           <span>🍷 “Come support the couple!”</span>
           <span>🍽️ “Let’s feast together!”</span>
           <span>🥂 “Cheers to a thousand toasts!”</span>
         </div>
-        <p className="text-xl Edu-font font-semibold text-emerald-600">
-          ESHWAR K MANASIJAN 
-          💖 
-          TEJASHWINI HARISH
-        </p>
+        */}
       </motion.section>
 
       {/* Invitation Section */}
       <motion.section className="text-center" {...fadeInUp}>
-        <h2 className="text-2xl font-bold mb-4">- INVITATION -</h2>
-        <div className="flex justify-center items-center space-x-2 my-4">
-          <div className="w-16 h-16 bg-green-200 rounded-full flex items-center justify-center"><span className="text-gray-500 text-xs">Groom</span></div>
+        <p className="text-3xl BeauRivage-font tracking-wider font-semibold text-emerald-700">
+            Eshwar K Manasijan
+            </p>
+          <div className="flex justify-center my-6">
+            <Image
+              src="/final-images/forest-final.png"
+              alt="Forest Image"
+              width={150}
+              height={150}
+              className="object-cover overflow-hidden rounded-full relative shadow-sm border border-emerald-200"
+            />
+          </div>
             <span className="text-3xl">🌸</span>
-          <div className="w-16 h-16 bg-green-200 rounded-full flex items-center justify-center"><span className="text-gray-500 text-xs">Bride</span></div>
-        </div>
+          <div className="flex justify-center my-6">
+              <Image
+              src="/final-images/forest-final.png"
+              alt="Forest Image"
+              width={150}
+              height={150}
+              className="object-cover overflow-hidden rounded-full relative shadow-sm border border-emerald-200"
+            />
+          </div>
+            <p className="text-3xl BeauRivage-font tracking-wider font-semibold text-emerald-700">
+            Tejashwini Harish
+            </p>
         <p className="text-md italic Edu-font">
-          💌
           <br />
-          In this lifetime, what a joy it’s been
+          In this lifetime, what a joy it’s been-
           <br />
-          for paths we have crossed and the conversations we have shared
+          for paths we have crossed and the conversations we have shared,
           <br />
-          we warmly invite you and those you hold dear
+          we warmly invite you and those you hold dear-
           <br />
           It’s been a while so let this day be,
           <br />
-          to witness our vows and bring us cheer
+          to witness our vows and bring us cheer-
           <br />
-          a sweet reunion indeed.
+          a sweet reunion indeed!
         </p>
       </motion.section>
 
@@ -194,11 +210,11 @@ export default function Home() {
       {/* Calendar Image Section */}
       <div className="flex justify-center my-6">
         <Image
-          src="/nov-calendar.png"
+          src="/final-images/calendar.png"
           alt="November 2025 Wedding Calendar"
           width={300}
           height={380}
-          className="rounded-lg shadow-lg border border-emerald-200"
+          className="scale-90 rounded-lg shadow-lg border border-emerald-200"
           priority
         />
       </div>
@@ -218,7 +234,7 @@ export default function Home() {
 
       {/* Map Section */}
       <motion.section className="text-center" {...zoomIn}>
-        <p className="mb-2 text-sm">[Tap or click the map for navigation↓]</p>
+        <p className="mb-2 text-sm">[Tap or click the map for navigation ↓]</p>
         <a
           href="https://maps.app.goo.gl/FYigzzmmvCuAaLpa6"
           target="_blank"
