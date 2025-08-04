@@ -87,7 +87,7 @@ export default function Home() {
             alt="Wedding Image"
             width={150}
             height={150}
-            className="mb-2 rounded-full border border-emerald-300"
+            className="mt-4 mb-4 rounded-full border border-emerald-300"
             style={{
               boxShadow: '0 0 0 16px rgba(255,255,255,0.7), 0 4px 32px 0 rgba(52,211,153,0.15)',
               WebkitMaskImage: 'radial-gradient(circle, white 70%, transparent 100%)',
@@ -97,12 +97,12 @@ export default function Home() {
           />
           <h1 className="text-5xl font-extrabold text-emerald-600 mb-4 mt-4 fancy-font">Our Wedding!</h1>
         </div>
-        <p className="text-md italic">
+        <p className="mt-4 text-md italic Edu-font">
           Raise your glasses, Join us in happiness, laughter, and light!
           <br />
           It’s a feast of love, a fabulous delight— 
           <br />
-          And you, my dear friend, make it just right.
+          And you, my dear friend, make it just right!
         </p>
         <div className="my-6">
           <Image
@@ -119,8 +119,10 @@ export default function Home() {
           <span>🍽️ “Let’s feast together!”</span>
           <span>🥂 “Cheers to a thousand toasts!”</span>
         </div>
-        <p className="text-xl font-semibold text-emerald-600">
-          ESHWAR K MANASIJAN 💖 TEJASHWINI HARISH
+        <p className="text-xl Edu-font font-semibold text-emerald-600">
+          ESHWAR K MANASIJAN 
+          💖 
+          TEJASHWINI HARISH
         </p>
       </motion.section>
 
