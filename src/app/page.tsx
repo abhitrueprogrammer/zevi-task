@@ -105,12 +105,12 @@ export default function Home() {
           <br />
           And you, my dear friend, make it just right!
         </p>
-        <div className="my-2">
+        <div className="my-0">
           <Image
             src="/final-images/engagement-final.png"
             alt="Ghibli-style wedding image"
-            width={400}
-            height={192}
+            width={500}
+            height={500}
             className="scale-90 object-cover rounded-lg shadow-lg border border-emerald-200"
             priority
           />
@@ -126,32 +126,40 @@ export default function Home() {
 
       {/* Invitation Section */}
       <motion.section className="text-center" {...fadeInUp}>
-        <p className="text-3xl BeauRivage-font tracking-wider font-semibold text-emerald-700">
-            Eshwar K Manasijan
-            </p>
-          <div className="flex justify-center my-6">
-            <Image
-              src="/final-images/forest-final.png"
-              alt="Forest Image"
-              width={150}
-              height={150}
-              className="object-cover overflow-hidden rounded-full relative shadow-sm border border-emerald-200"
-            />
+          <div className="flex flex-row justify-center items-center space-x-4 my-6">
+            {/* Groom */}
+            <div className="flex flex-col items-center space-y-2">
+              <div className="w-20 h-20 rounded-full overflow-hidden relative border border-emerald-300 shadow-md">
+                <Image
+                  src="/final-images/forest-final.png"
+                  alt="Groom"
+                  fill
+                  className="object-cover object-bottom"
+                />
+              </div>
+              <p className="text-3xl BeauRivage-font tracking-wider font-semibold text-emerald-700">
+                Eshwar K Manasijan
+              </p>
+            </div>
+
+            <span className="text-2xl">❤️</span>
+
+            {/* Bride */}
+            <div className="flex flex-col items-center space-y-2">
+              <div className="w-20 h-20 rounded-full overflow-hidden relative border border-emerald-300 shadow-md">
+                <Image
+                  src="/final-images/forest-final.png"
+                  alt="Bride"
+                  fill
+                  className="object-cover object-bottom"
+                />
+              </div>
+              <p className="text-3xl BeauRivage-font tracking-wider font-semibold text-emerald-700">
+                Tejashwini Harish
+              </p>
+            </div>
           </div>
-            <span className="text-3xl">🌸</span>
-          <div className="flex justify-center my-6">
-              <Image
-              src="/final-images/forest-final.png"
-              alt="Forest Image"
-              width={150}
-              height={150}
-              className="object-cover overflow-hidden rounded-full relative shadow-sm border border-emerald-200"
-            />
-          </div>
-            <p className="text-3xl BeauRivage-font tracking-wider font-semibold text-emerald-700">
-            Tejashwini Harish
-            </p>
-        <p className="text-md italic Edu-font">
+          <p className="text-md italic Edu-font">
           <br />
           In this lifetime, what a joy it’s been-
           <br />
