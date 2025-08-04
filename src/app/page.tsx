@@ -3,7 +3,7 @@ import Image from "next/image";
 
 import { useState, useEffect, useRef } from "react";
 import toast, { Toaster } from "react-hot-toast";
-import { motion } from "framer-motion";
+import { motion, easeOut, easeIn } from "framer-motion";
 
 export default function Home() {
   const [isMobile, setIsMobile] = useState(false);
@@ -26,37 +26,37 @@ export default function Home() {
     initial: { opacity: 0, y: -40 },
     whileInView: { opacity: 1, y: 0 },
     viewport: { once: true, amount: 0.2 },
-    transition: { duration: 0.7, ease: "easeOut" },
+    transition: { duration: 0.7, ease: easeOut },
   };
   const fadeInUp = {
     initial: { opacity: 0, y: 40 },
     whileInView: { opacity: 1, y: 0 },
     viewport: { once: true, amount: 0.2 },
-    transition: { duration: 0.7, ease: "easeOut" },
+    transition: { duration: 0.7, ease: easeOut },
   };
   const fadeInLeft = {
     initial: { opacity: 0, x: -60 },
     whileInView: { opacity: 1, x: 0 },
     viewport: { once: true, amount: 0.2 },
-    transition: { duration: 0.8, ease: "easeOut" },
+    transition: { duration: 0.8, ease: easeOut },
   };
   const fadeInRight = {
     initial: { opacity: 0, x: 60 },
     whileInView: { opacity: 1, x: 0 },
     viewport: { once: true, amount: 0.2 },
-    transition: { duration: 0.8, ease: "easeOut" },
+    transition: { duration: 0.8, ease: easeOut },
   };
   const zoomIn = {
     initial: { opacity: 0, scale: 0.8 },
     whileInView: { opacity: 1, scale: 1 },
     viewport: { once: true, amount: 0.2 },
-    transition: { duration: 0.7, ease: "easeOut" },
+    transition: { duration: 0.7, ease: easeOut },
   };
   const fadeInUpDelay = {
     initial: { opacity: 0, y: 40 },
     whileInView: { opacity: 1, y: 0 },
     viewport: { once: true, amount: 0.2 },
-    transition: { duration: 0.7, ease: "easeOut", delay: 0.3 },
+    transition: { duration: 0.7, ease: easeOut, delay: 0.3 },
   };
   const fadeInUpSpring = {
     initial: { opacity: 0, y: 60 },
@@ -68,13 +68,13 @@ export default function Home() {
     initial: { opacity: 0, rotate: -8, y: 40 },
     whileInView: { opacity: 1, rotate: 0, y: 0 },
     viewport: { once: true, amount: 0.2 },
-    transition: { duration: 0.8, ease: "easeOut" },
+    transition: { duration: 0.8, ease: easeOut },
   };
   const staggerContainer = {
     initial: { opacity: 0, y: 40 },
     whileInView: { opacity: 1, y: 0 },
     viewport: { once: true, amount: 0.2 },
-    transition: { staggerChildren: 0.15, duration: 0.7, ease: "easeOut" },
+    transition: { staggerChildren: 0.15, duration: 0.7, ease: easeOut },
   };
 
   const weddingContent = (
