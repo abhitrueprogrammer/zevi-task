@@ -83,10 +83,10 @@ export default function Home() {
       <motion.section className="text-center" {...fadeInDown}>
         <div className="flex flex-col items-center">
           <Image
-            src="/wedding_image.png"
+            src="/our-wedding.png"
             alt="Wedding Image"
-            width={120}
-            height={120}
+            width={150}
+            height={150}
             className="mb-2 rounded-full border border-emerald-300"
             style={{
               boxShadow: '0 0 0 16px rgba(255,255,255,0.7), 0 4px 32px 0 rgba(52,211,153,0.15)',
@@ -95,12 +95,14 @@ export default function Home() {
             }}
             priority
           />
-          <h1 className="text-5xl font-extrabold text-emerald-600 mb-4 fancy-font">Our Wedding</h1>
+          <h1 className="text-5xl font-extrabold text-emerald-600 mb-4 mt-4 fancy-font">Our Wedding!</h1>
         </div>
         <p className="text-md italic">
           Raise your glasses, Join us in happiness, laughter, and light!
           <br />
-          It’s a feast of love, a fabulous delight— And you, my dear friend, make it just right.
+          It’s a feast of love, a fabulous delight— 
+          <br />
+          And you, my dear friend, make it just right.
         </p>
         <div className="my-6">
           <Image
@@ -130,7 +132,7 @@ export default function Home() {
             <span className="text-3xl">🌸</span>
           <div className="w-16 h-16 bg-green-200 rounded-full flex items-center justify-center"><span className="text-gray-500 text-xs">Bride</span></div>
         </div>
-        <p className="text-md italic">
+        <p className="text-md italic Edu-font">
           💌
           <br />
           In this lifetime, what a joy it’s been
@@ -190,17 +192,17 @@ export default function Home() {
       {/* Calendar Image Section */}
       <div className="flex justify-center my-6">
         <Image
-          src="/november-calendar.png"
+          src="/nov-calendar.png"
           alt="November 2025 Wedding Calendar"
           width={300}
-          height={450}
+          height={380}
           className="rounded-lg shadow-lg border border-emerald-200"
           priority
         />
       </div>
 
       {/* Poem Section */}
-      <motion.section className="text-center italic text-md" {...fadeInRight}>
+      <motion.section className="text-center italic text-md Edu-font" {...fadeInRight}>
         <p>
           A wedding promise both gentle and grand,
           <br />
@@ -216,17 +218,17 @@ export default function Home() {
       <motion.section className="text-center" {...zoomIn}>
         <p className="mb-2 text-sm">[Tap or click the map for navigation↓]</p>
         <a
-          href="https://goo.gl/maps/2wQwQwQwQwQwQwQw7" // Replace with actual venue link
+          href="https://maps.app.goo.gl/FYigzzmmvCuAaLpa6"
           target="_blank"
           rel="noopener noreferrer"
-          style={{ display: 'inline-block', width: '100%' }}
+          style={{ display: 'inline-block'}}
         >
           <Image
             src="/hand-drawn-map.png"
             alt="Hand-drawn map to venue"
-            width={400}
-            height={600}
-            className="w-full h-64 object-contain rounded-lg shadow-lg cursor-pointer border-2 border-emerald-300"
+            width={350}
+            height={450}
+            className="w-64 h-64 object-contain rounded-lg shadow-lg cursor-pointer border-2 border-emerald-300 mx-auto"
             style={{ background: '#fff' }}
             priority
           />
@@ -234,7 +236,7 @@ export default function Home() {
       </motion.section>
 
       {/* Second Poem Section */}
-      <motion.section className="text-center italic text-md" {...fadeInRight}>
+      <motion.section className="text-center italic text-md Edu-font" {...fadeInRight}>
         <p>
           True, gentle, fated, and timeless —
           <br />
@@ -316,7 +318,7 @@ export default function Home() {
             priority
           />
         </div>
-        <p className="italic text-md">
+        <p className="italic text-md Edu-font">
           We met through life—
           <br />
           not guided, not planned,
@@ -415,7 +417,7 @@ export default function Home() {
           <motion.p className="text-left pt-4" {...fadeInRight}>
             Thank you for being a part of this beautiful journey with us. Whether it’s your blessings, your presence, or a thoughtful contribution, we are truly grateful. This celebration is as much about family and friendship as it is about the two of us and your support means everything.
           </motion.p>
-          <motion.p className="text-center font-semibold text-md" {...fadeInRight}>
+          <motion.p className="text-lg text-center font-semibold text-md Edu-font" {...fadeInRight}>
             With love,
             <br/>
             The-soon-to-be Mister and Missus
@@ -429,7 +431,7 @@ export default function Home() {
     <main
       className="flex flex-col items-center justify-center min-h-screen p-4"
       style={{
-        backgroundImage: 'url(/floral-background.jpg)',
+        backgroundImage: 'url(https://images.pexels.com/photos/414667/pexels-photo-414667.jpeg)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
@@ -440,7 +442,7 @@ export default function Home() {
         style={{
           position: 'absolute',
           inset: 0,
-          background: 'rgba(255,255,255,0.7)',
+          background: 'rgba(255,255,255,0.2)',
           zIndex: 0,
         }}
       />
