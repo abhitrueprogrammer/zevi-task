@@ -175,14 +175,12 @@ export default function Home() {
         </p>
       </motion.section>
 
-
       {/* Schedule Section */}
       <motion.section {...fadeInLeft}>
         <h2 className="text-2xl font-bold text-center mb-4">THE EXALTED DAYS</h2>
-        <div className="flex flex-row justify-center items-center gap-2 w-full">
-          {/* Left: 15th November */}
-          <div className="flex-1 text-left border-l-4 border-emerald-300 pl-4">
-            <h3 className="text-xl font-semibold mb-2">15th November</h3>
+          <div className="grid grid-cols-1 gap-6 text-sm">
+          <div className="border-l-4 border-emerald-300 pl-4">
+          <h3 className="text-xl font-semibold mb-2">15th November</h3>
             <ul className="space-y-1">
               <li><span className="font-bold">04:00pm</span> - Onset of the event</li>
               <li><span className="font-bold">04:45pm - 05:45pm</span> - Engagement</li>
@@ -190,21 +188,7 @@ export default function Home() {
               <li><span className="font-bold">7:00 pm</span> – Celebration Banquet</li>
             </ul>
           </div>
-          {/* Center: Decorative SVG */}
-          <div className="flex flex-col items-center justify-center px-2">
-            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <ellipse cx="20" cy="20" rx="18" ry="8" fill="#A7F3D0" />
-              <path d="M20 10 Q22 18 28 18 Q24 22 20 18 Q16 22 12 18 Q18 18 20 10" fill="#34D399" />
-              <circle cx="20" cy="20" r="3" fill="#FBBF24" />
-            </svg>
-            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <ellipse cx="16" cy="16" rx="14" ry="6" fill="#FDE68A" />
-              <path d="M16 8 Q18 14 22 14 Q19 17 16 14 Q13 17 10 14 Q14 14 16 8" fill="#F59E42" />
-              <circle cx="16" cy="16" r="2" fill="#34D399" />
-            </svg>
-          </div>
-          {/* Right: 16th November */}
-          <div className="flex-1 text-right border-r-4 border-emerald-300 pr-4">
+          <div className="border-l-4 border-emerald-300 pl-4">
             <h3 className="text-xl font-semibold mb-2">16th November</h3>
             <ul className="space-y-1">
               <li><span className="font-bold">From 07:45</span> - Breakfast</li>
@@ -215,7 +199,7 @@ export default function Home() {
         </div>
       </motion.section>
 
-      {/* Calendar Image Section */}
+{/* Calendar Image Section */}
       <div className="flex justify-center my-6">
         <Image
           src="/final-images/calendar.png"
