@@ -93,11 +93,13 @@ export default function Home() {
           <h1 className="text-5xl font-extrabold text-emerald-600 mb-4 mt-4 fancy-font">Our Wedding!</h1>
         </div>
         <p className="mt-4 text-lg italic Edu-font">
-          Raise your glasses, Join us in happiness, laughter, and light!
+          Join us in happiness, laughter, and light!
           <br />
-          It’s a feast of love, a fabulous delight— 
+          It’s a feast of love, a fabulous delight
           <br />
-          And you, my dear friend, make it just right!
+          and you, my dear friend, 
+          <br />
+          Make it just right!
         </p>
         <div className="my-0">
           <Image
@@ -122,7 +124,7 @@ export default function Home() {
       <motion.section className="text-center" {...fadeInUp}>
           <div className="flex flex-col justify-center items-center space-x-4 my-6">
             {/* Groom */}
-            <div className="flex flex-col items-center space-y-2">
+            <div className="flex flex-col items-center space-y-4">
               <p className="text-3xl BeauRivage-font tracking-wider font-semibold text-emerald-700">
                 Eshwar K Manasijan
               </p>
@@ -131,23 +133,27 @@ export default function Home() {
             <span className="text-lg">❤️</span>
 
             {/* Bride */}
-            <div className="flex flex-col items-center space-y-2">
+            <div className="flex flex-col items-center space-y-4">
               <p className="text-3xl BeauRivage-font tracking-wider font-semibold text-emerald-700">
                 Tejashwini Harish
               </p>
             </div>
           </div>
-          <p className="text-md italic Edu-font">
+          <p className="text-lg italic Edu-font">
           <br />
-          In this lifetime, what a joy it’s been-
+          In this lifetime, what a joy it’s been
           <br />
-          for paths we have crossed and the conversations we have shared,
+          for paths we have crossed
           <br />
-          we warmly invite you and those you hold dear-
+          and the conversations we have shared,
+          <br />
+          we warmly invite you
+          <br />
+          and those you hold dear
           <br />
           It’s been a while so let this day be,
           <br />
-          to witness our vows and bring us cheer-
+          to witness our vows and bring us cheer
           <br />
           a sweet reunion indeed!
         </p>
@@ -190,15 +196,15 @@ export default function Home() {
       </div>
  */}
       {/* Poem Section */}
-      <motion.section className="text-center italic text-md Edu-font" {...fadeInRight}>
+      <motion.section className="text-center italic text-lg Edu-font" {...fadeInRight}>
         <p>
           A wedding promise both gentle and grand,
           <br />
-          Not born of chance, but shaped by hand.
+          Not born of chance, but shaped by hand
           <br />
           Hearts entwined beneath the stars above,
           <br />
-          Held in the harmony of eternal love.
+          Held in the harmony of eternal love
         </p>
       </motion.section>
 
@@ -224,17 +230,17 @@ export default function Home() {
       </motion.section>
 
       {/* Second Poem Section */}
-      <motion.section className="text-center italic text-md Edu-font" {...fadeInRight}>
+      <motion.section className="text-center italic text-lg Edu-font" {...fadeInRight}>
         <p>
-          True, gentle, fated, and timeless —
+          True, gentle, fated, and timeless
           <br />
-          this is the day that turns you and me into us.
+          the day that turns you and me into us
           <br />
           Where the hands we hold today
           <br />
           will be held all tomorrows
           <br />
-          echoing our love forever.
+          echoing our love forever
         </p>
       </motion.section>
 
@@ -306,8 +312,8 @@ export default function Home() {
             priority
           />
         </div>
-        <p className="italic text-md Edu-font">
-          We met through life—
+        <p className="italic text-lg Edu-font">
+          We met through life
           <br />
           not guided, not planned,
           <br />
@@ -315,30 +321,30 @@ export default function Home() {
           <br />
           with souls intertwined
           <br />
-          My forever begins you
+          <strong>My forever begins with you</strong>
         </p>
       </motion.section>
 
       {/* Gift Registry Section - fade in each subsection */}
       <motion.section className="text-sm" {...staggerContainer}>
         <motion.h2 className="text-2xl font-bold text-center mb-4" {...fadeInRight}>GIFT REGISTRY</motion.h2>
-        <div className="text-left space-y-4 leading-relaxed">
-          <motion.p {...fadeInRight}>
+        <div className="text-left space-y-6 leading-relaxed">
+          <motion.p className="text-justify space-y-10 leading-[1.8]" {...fadeInRight}>
             Dear Family &amp; Friends,<br />
-            Your presence is the most precious gift we could ask for. But if you wish to bless us with something extra, we&apos;ve put together a thoughtful gift registry. Each option is meaningful to us, rooted in tradition, growth, and heartfelt memories. We&apos;ve grouped everything into three broad categories so feel free to choose what resonates most with you.
+            &emsp;&emsp;Your presence is the most precious gift we could ask for, and if you wish to bless us with something extra, we&apos;ve put together a thoughtful gift registry. 
+            <br />&emsp;&emsp;Each option is meaningful to us, rooted in tradition, growth, and heartfelt memories.
+            <br />Feel free to choose what resonates most with you.
           </motion.p>
           <motion.div {...fadeInRight}>
-            <h3 className="text-lg font-semibold mb-1">Invest in Us</h3>
-            <p>Digital gifting (gold):</p>
-            <ul className="list-disc list-inside ml-4 text-xs">
-              <li><a href="https://www.caratlane.com/caratlane-digital-gold?srsltid=AfmBOoqcyKK0Gh8cFi2qbf8CT1CH1SLzQ5U7-dBGOZfXxhNl6U5C7JGw" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:underline">Click here to gift digital gold</a></li>
-              <li>Go to the gifting section.</li>
-              <li>Use recipient address: 7550334997</li>
-            </ul>
+            <h3 className="text-lg font-semibold mb-1 leading-[1.8]">Gift with Tradition</h3>
+            <p className="leading-[1.8]">If you prefer to bless us with a precious metal or cash gift, we deeply appreciate it. You can hand it over during the event.</p>
           </motion.div>
           <motion.div {...fadeInRight}>
-            <h3 className="text-lg font-semibold mb-1">Gift with Tradition</h3>
-            <p>If you prefer to bless us with a precious metal or cash gift, we deeply appreciate it. You can hand it over during the event.</p>
+            <h3 className="text-lg font-semibold mb-1">Invest in Us</h3>
+            <p>Digital Bullion:</p>
+            <ul className="list-disc list-inside ml-4 text-sm leading-[1.8]">
+              <li><a href="https://www.caratlane.com/caratlane-digital-gold?srsltid=AfmBOoqcyKK0Gh8cFi2qbf8CT1CH1SLzQ5U7-dBGOZfXxhNl6U5C7JGw" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:underline">Click here to gift digital gold</a></li>
+            </ul>
           </motion.div>
           <motion.div {...fadeInRight}>
             <h3 className="text-lg font-semibold mb-1">Gift from the Heart</h3>
