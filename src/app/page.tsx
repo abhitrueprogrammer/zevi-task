@@ -87,18 +87,12 @@ export default function Home() {
             alt="Wedding Image"
             width={150}
             height={150}
-            className="mt-4 mb-4 w-40 object-cover rounded-full shadow-lg border border-emerald-300"
-            
-            style={{
-              boxShadow: '0 0 0 16px rgba(255,255,255,0.7), 0 4px 32px 0 rgba(52,211,153,0.15)',
-              WebkitMaskImage: 'radial-gradient(circle, white 70%, transparent 100%)',
-              maskImage: 'radial-gradient(circle, white 70%, transparent 100%)',
-            }}
+            className="mt-4 mb-4 w-full object-cover border-emerald-300"
             priority
           />
           <h1 className="text-5xl font-extrabold text-emerald-600 mb-4 mt-4 fancy-font">Our Wedding!</h1>
         </div>
-        <p className="mt-4 text-md italic Edu-font">
+        <p className="mt-4 text-lg italic Edu-font">
           Raise your glasses, Join us in happiness, laughter, and light!
           <br />
           It’s a feast of love, a fabulous delight— 
@@ -129,15 +123,7 @@ export default function Home() {
           <div className="flex flex-row justify-center items-center space-x-4 my-6">
             {/* Groom */}
             <div className="flex flex-col items-center space-y-2">
-              <div className="w-20 h-20 rounded-full overflow-hidden relative border border-emerald-300 shadow-md">
-                <Image
-                  src="/final-images/forest-final.png"
-                  alt="Groom"
-                  fill
-                  className="object-cover object-bottom"
-                />
-              </div>
-              <p className="text-3xl BeauRivage-font tracking-wider font-semibold text-emerald-700">
+              <p className="text-sm BeauRivage-font tracking-wider font-semibold text-emerald-700">
                 Eshwar K Manasijan
               </p>
             </div>
@@ -146,14 +132,6 @@ export default function Home() {
 
             {/* Bride */}
             <div className="flex flex-col items-center space-y-2">
-              <div className="w-20 h-20 rounded-full overflow-hidden relative border border-emerald-300 shadow-md">
-                <Image
-                  src="/final-images/forest-final.png"
-                  alt="Bride"
-                  fill
-                  className="object-cover object-bottom"
-                />
-              </div>
               <p className="text-3xl BeauRivage-font tracking-wider font-semibold text-emerald-700">
                 Tejashwini Harish
               </p>
@@ -199,7 +177,7 @@ export default function Home() {
         </div>
       </motion.section>
 
-{/* Calendar Image Section */}
+{/* Calendar Image Section
       <div className="flex justify-center my-6">
         <Image
           src="/final-images/calendar.png"
@@ -210,7 +188,7 @@ export default function Home() {
           priority
         />
       </div>
-
+ */}
       {/* Poem Section */}
       <motion.section className="text-center italic text-md Edu-font" {...fadeInRight}>
         <p>
