@@ -17,7 +17,7 @@ async function getAuth(): Promise<JWT> {
   });
 }
 
-async function appendDataToSheet(name: string, telephone: string, pax: number) {
+async function appendDataToSheet(name: string, message: string) {
   const authClient = await getAuth();
   const sheets = google.sheets({
     version: "v4",
@@ -26,23 +26,23 @@ async function appendDataToSheet(name: string, telephone: string, pax: number) {
 
   await sheets.spreadsheets.values.append({
     spreadsheetId: SHEET_ID,
-    range: "RSVP!A:C",
+    range: "Messages!A:B",
     valueInputOption: "RAW",
     requestBody: {
-      values: [[name, telephone, pax]],
+      values: [[name, message]],
     },
   });
 }
 
 export async function POST(req: Request) {
   try {
-    const { name, telephone, pax } = await req.json();
+    const { name, message } = await req.json();
 
-    if (!name || !telephone || !pax) {
-      return NextResponse.json({ error: "Name, telephone, and pax are required" }, { status: 400 });
+    if (!name || !message) {
+      return NextResponse.json({ error: "Name and message are required" }, { status: 400 });
     }
 
-    await appendDataToSheet(name, telephone, pax || "");
+    await appendDataToSheet(name, message || "");
     return NextResponse.json({ message: "RSVP submitted successfully" });
   } catch (error) {
     console.error("Error submitting RSVP:", error);
