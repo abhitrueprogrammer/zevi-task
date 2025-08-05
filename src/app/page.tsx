@@ -120,15 +120,15 @@ export default function Home() {
 
       {/* Invitation Section */}
       <motion.section className="text-center" {...fadeInUp}>
-          <div className="flex flex-row justify-center items-center space-x-4 my-6">
+          <div className="flex flex-col justify-center items-center space-x-4 my-6">
             {/* Groom */}
             <div className="flex flex-col items-center space-y-2">
-              <p className="text-sm BeauRivage-font tracking-wider font-semibold text-emerald-700">
+              <p className="text-3xl BeauRivage-font tracking-wider font-semibold text-emerald-700">
                 Eshwar K Manasijan
               </p>
             </div>
 
-            <span className="text-2xl">❤️</span>
+            <span className="text-lg">❤️</span>
 
             {/* Bride */}
             <div className="flex flex-col items-center space-y-2">
