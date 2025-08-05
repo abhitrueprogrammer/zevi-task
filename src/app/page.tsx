@@ -82,15 +82,6 @@ export default function Home() {
       {/* Hero Section */}
       <motion.section className="text-center" {...fadeInDown}>
         <div className="flex flex-col items-center">
-          <Image
-            src="/final-images/foot-final.png"
-            alt="Wedding Image"
-            width={150}
-            height={150}
-            className="mt-4 mb-4 w-full object-cover border-emerald-300"
-            onContextMenu={(e) => e.preventDefault()}
-            priority
-          />
           <h1 className="text-5xl font-extrabold text-emerald-600 mb-4 mt-4 fancy-font">Our Wedding!</h1>
         </div>
         <p className="mt-4 text-lg italic Edu-font">
@@ -454,7 +445,7 @@ export default function Home() {
           <div className="relative mx-auto border-gray-800 dark:border-gray-800 bg-gray-800 border-[14px] rounded-[2.5rem] h-[800px] w-[400px] shadow-xl">
             <div className="w-[140px] h-[18px] bg-gray-800 top-0 rounded-b-[1rem] left-1/2 -translate-x-1/2 absolute"></div>
               <div
-                className="min-h-screen bg-repeat-y bg-top bg-[length:100%_auto]"
+                className="rounded-[2rem] no-scrollbar overflow-y-auto scrollbar-hide h-full font-serif text-gray-800"
                 style={{
                   backgroundImage: "url(https://i.pinimg.com/736x/06/b6/75/06b675d52c66d0c1af49fd4054d515a1.jpg)",
                   backgroundRepeat: "repeat-y",
