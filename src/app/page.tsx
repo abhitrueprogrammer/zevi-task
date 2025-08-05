@@ -358,7 +358,7 @@ export default function Home() {
 
               {/* RSVP Section */}
               <motion.section {...fadeInRight}>
-                <h2 className="text-4xl font-bold text-center fancy-font mb-4 my-10">Repondez s'il Vous Plait</h2>
+                <h2 className="text-4xl font-bold text-center fancy-font mb-4 my-10">Repondez s&apos;il Vous Plait</h2>
                 <form
                   className="space-y-4 text-sm"
                   onSubmit={(e) => {
@@ -456,7 +456,7 @@ export default function Home() {
               <div
                 className="min-h-screen bg-repeat-y bg-top bg-[length:100%_auto]"
                 style={{
-                  backgroundImage: "url(https://i.pinimg.com/736x/06/b6/75/06b675d52c66d0c1af49fd4054d515a1.jpg)", // Change this to your actual path
+                  backgroundImage: "url(https://i.pinimg.com/736x/06/b6/75/06b675d52c66d0c1af49fd4054d515a1.jpg)",
                   backgroundRepeat: "repeat-y",
                   backgroundSize: "100% auto",
                   backgroundPosition: "top center",
