@@ -88,6 +88,7 @@ export default function Home() {
             width={150}
             height={150}
             className="mt-4 mb-4 w-full object-cover border-emerald-300"
+            onContextMenu={(e) => e.preventDefault()}
             priority
           />
           <h1 className="text-5xl font-extrabold text-emerald-600 mb-4 mt-4 fancy-font">Our Wedding!</h1>
@@ -108,6 +109,7 @@ export default function Home() {
             width={500}
             height={500}
             className="scale-90 object-cover rounded-lg shadow-lg border border-emerald-200"
+            onContextMenu={(e) => e.preventDefault()}
             priority
           />
         </div>
@@ -309,6 +311,7 @@ export default function Home() {
             width={400}
             height={128}
             className="w-full h-32 object-cover rounded-lg shadow-lg border border-emerald-200"
+            onContextMenu={(e) => e.preventDefault()}
             priority
           />
         </div>
@@ -329,7 +332,7 @@ export default function Home() {
       <motion.section className="text-sm" {...staggerContainer}>
         <motion.h2 className="text-2xl font-bold text-center mb-4" {...fadeInRight}>GIFT REGISTRY</motion.h2>
         <div className="text-left space-y-6 leading-relaxed">
-          <motion.p className="text-justify space-y-10 leading-[1.8]" {...fadeInRight}>
+          <motion.p className="text-base text-justify space-y-10 leading-[1.8]" {...fadeInRight}>
             Dear Family &amp; Friends,<br />
             &emsp;&emsp;Your presence is the most precious gift we could ask for, and if you wish to bless us with something extra, we&apos;ve put together a thoughtful gift registry. 
             <br />&emsp;&emsp;Each option is meaningful to us, rooted in tradition, growth, and heartfelt memories.
@@ -337,18 +340,19 @@ export default function Home() {
           </motion.p>
           <motion.div {...fadeInRight}>
             <h3 className="text-lg font-semibold mb-1 leading-[1.8]">Gift with Tradition</h3>
-            <p className="leading-[1.8]">If you prefer to bless us with a precious metal or cash gift, we deeply appreciate it. You can hand it over during the event.</p>
+            <p className="text-base text-justify leading-[1.8]">&emsp;&emsp;If you prefer to bless us with a precious metal or cash gift, we deeply appreciate it. You can hand it over during the event.</p>
           </motion.div>
           <motion.div {...fadeInRight}>
             <h3 className="text-lg font-semibold mb-1">Invest in Us</h3>
-            <p>Digital Bullion:</p>
-            <ul className="list-disc list-inside ml-4 text-sm leading-[1.8]">
+            <p className="text-base">Digital Bullion:</p>
+            <ul className="list-disc list-inside ml-4 text-base leading-[1.8]">
               <li><a href="https://www.caratlane.com/caratlane-digital-gold?srsltid=AfmBOoqcyKK0Gh8cFi2qbf8CT1CH1SLzQ5U7-dBGOZfXxhNl6U5C7JGw" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:underline">Click here to gift digital gold</a></li>
+              <li><a href="https://www.youtube.com/watch?v=IxX_QHay02M&list=RDIxX_QHay02M&start_radio=1">Please click the link below</a></li>
             </ul>
           </motion.div>
           <motion.div {...fadeInRight}>
             <h3 className="text-lg font-semibold mb-1">Gift from the Heart</h3>
-            <p>Share your blessings & memories.</p>
+            <p className="text-base">Share your blessings & memories!</p>
             <input
               type="text"
               id="gift-message-name"
@@ -405,17 +409,16 @@ export default function Home() {
             </div>
           </motion.div>
           <motion.div {...fadeInRight}>
-            <h3 className="text-lg font-semibold mb-1">Something Personal or Handmade?</h3>
-            <p>Have something special, handmade, or meaningful? We’d love to receive it—there’s space in our hearts and home for all your love.</p>
+            <h3 className="text-lg Edu-font font-semibold mb-1 leading-[1.8]">Something Personal or Handmade?</h3>
+            <p className="text-base text-justify Edu-font leading-[1.8]">Have something special, handmade, or meaningful? We’d love to receive it—there’s space in our hearts and home for all your love.</p>
+                <motion.p className="text-base text-justify Edu-font pt-4 leading-[1.8]" {...fadeInRight}>
+                  Thank you for being a part of this beautiful journey with us. Whether it’s your blessings, your presence, or a thoughtful contribution, we are truly grateful. This celebration is as much about family and friendship as it is about the two of us.
+                </motion.p>
+                <motion.p className="text-xl text-center font-semibold text-md Edu-font leading-[1.8] mt-6" {...fadeInRight}>
+                  With love,<br />
+                  The-soon-to-be Mister and Missus
+                </motion.p>
           </motion.div>
-          <motion.p className="text-left pt-4" {...fadeInRight}>
-            Thank you for being a part of this beautiful journey with us. Whether it’s your blessings, your presence, or a thoughtful contribution, we are truly grateful. This celebration is as much about family and friendship as it is about the two of us and your support means everything.
-          </motion.p>
-          <motion.p className="text-lg text-center font-semibold text-md Edu-font" {...fadeInRight}>
-            With love,
-            <br/>
-            The-soon-to-be Mister and Missus
-          </motion.p>
         </div>
       </motion.section>
     </div>
