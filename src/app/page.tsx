@@ -124,19 +124,20 @@ export default function Home() {
 
       {/* Invitation Section */}
       <motion.section className="text-center" {...fadeInUp}>
-          <div className="flex flex-col justify-center items-center space-x-4 my-6">
-            {/* Groom */}
-            <div className="flex flex-col items-center space-y-4">
-              <p className="text-3xl BeauRivage-font tracking-wider font-semibold text-emerald-700">
-                Eshwar K Manasijan
-              </p>
-            </div>
+        <div className="flex flex-col my-6">
+          {/* Groom */}
+          <div className="flex flex-col items-start leading-relaxed mb-6">
+            <p className="text-3xl BeauRivage-font tracking-wider font-semibold text-emerald-700 text-left">
+              Eshwar K Manasijan
+            </p>
+          </div>
+          
+          {/* Heart */}
+          <span className="text-3xl px-2 my-0">❤️</span>
 
-            <span className="text-lg">❤️</span>
-
-            {/* Bride */}
-            <div className="flex flex-col items-center space-y-4">
-              <p className="text-3xl BeauRivage-font tracking-wider font-semibold text-emerald-700">
+          {/* Bride */}
+            <div className="flex flex-col items-end leading-relaxed mt-6">
+              <p className="text-3xl BeauRivage-font tracking-wider font-semibold text-emerald-700 text-center">
                 Tejashwini Harish
               </p>
             </div>
@@ -210,98 +211,6 @@ export default function Home() {
         </p>
       </motion.section>
 
-      {/* Map Section */}
-      <motion.section className="text-center" {...zoomIn}>
-        <p className="mb-2 text-sm">[Tap or click the map for navigation ↓]</p>
-        <a
-          href="https://maps.app.goo.gl/FYigzzmmvCuAaLpa6"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{ display: 'inline-block'}}
-        >
-          <Image
-            src="/hand-drawn-map.png"
-            alt="Hand-drawn map to venue"
-            width={350}
-            height={450}
-            className="w-64 h-64 object-contain rounded-lg shadow-lg cursor-pointer border-2 border-emerald-300 mx-auto"
-            style={{ background: '#fff' }}
-            priority
-          />
-        </a>
-      </motion.section>
-
-      {/* Second Poem Section */}
-      <motion.section className="text-center italic text-lg Edu-font" {...fadeInRight}>
-        <p>
-          True, gentle, fated, and timeless
-          <br />
-          the day that turns you and me into us
-          <br />
-          Where the hands we hold today
-          <br />
-          will be held all tomorrows
-          <br />
-          echoing our love forever
-        </p>
-      </motion.section>
-
-      {/* RSVP Section */}
-      <motion.section {...fadeInRight}>
-        <h2 className="text-2xl font-bold text-center mb-4">RSVP</h2>
-        <p className="text-center mb-4 text-sm">Kindly RSVP by Nov 1st, 2025</p>
-        <form
-          className="space-y-3 text-sm"
-          onSubmit={(e) => {
-            e.preventDefault();
-            const form = e.target as HTMLFormElement;
-            const name = (form.elements.namedItem("name") as HTMLInputElement).value;
-            const telephone = (form.elements.namedItem("telephone") as HTMLInputElement).value;
-            const pax = (form.elements.namedItem("pax") as HTMLInputElement).value;
-
-            const promise = fetch("/api/rsvp", {
-              method: "POST",
-              headers: {
-                "Content-Type": "application/json",
-              },
-              body: JSON.stringify({ name, telephone, pax: parseInt(pax) }),
-            }).then((res) => {
-              if (!res.ok) {
-                throw new Error("Failed to submit RSVP.");
-              }
-              return res.json();
-            });
-
-            toast.promise(promise, {
-              loading: "Submitting RSVP...",
-              success: () => {
-                form.reset();
-                return "RSVP submitted successfully!";
-              },
-              error: "Failed to submit RSVP.",
-            });
-          }}
-        >
-          <div>
-            <label htmlFor="name" className="block text-xs font-medium text-gray-700">Name</label>
-            <input type="text" id="name" name="name" className="mt-1 block w-full px-2 py-1 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-emerald-500 focus:border-emerald-500"/>
-          </div>
-          <div>
-            <label htmlFor="telephone" className="block text-xs font-medium text-gray-700">Telephone</label>
-            <input type="tel" id="telephone" name="telephone" className="mt-1 block w-full px-2 py-1 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-emerald-500 focus:border-emerald-500"/>
-          </div>
-          <div>
-            <label htmlFor="pax" className="block text-xs font-medium text-gray-700">No. of people:</label>
-            <input type="number" id="pax" name="pax" min="1" className="mt-1 block w-full px-2 py-1 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-emerald-500 focus:border-emerald-500"/>
-          </div>
-          <div className="text-center pt-2">
-            <button type="submit" className="px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-emerald-500 hover:bg-emerald-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500">
-              RSVP Now
-            </button>
-          </div>
-        </form>
-      </motion.section>
-
       {/* Image and Quote Section */}
       <motion.section className="text-center" {...fadeInRight}>
         <div className="my-6">
@@ -367,7 +276,7 @@ export default function Home() {
               rows={3}
               placeholder="Your message..."
             ></textarea>
-            <div className="text-right pt-2">
+            <div className="flex justify-end text-right pt-2">
               <button
                 type="button"
                 onClick={() => {
@@ -402,8 +311,7 @@ export default function Home() {
                     error: "Failed to send message.",
                   });
                 }}
-                className="px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-emerald-500 hover:bg-emerald-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500"
-              >
+                className="text-white flex items-center justify-center text-sm tracking-widest text-center whitespace-normal px-4 py-3 min-w-[80px] h-8 rounded-full bg-[#3c9e5e] hover:bg-[#2b7445] transition-colors duration-300">
                 Send
               </button>
             </div>
@@ -411,6 +319,99 @@ export default function Home() {
           <motion.div {...fadeInRight}>
             <h3 className="text-lg Edu-font font-semibold mb-1 leading-[1.8]">Something Personal or Handmade?</h3>
             <p className="text-base text-justify Edu-font leading-[1.8]">Have something special, handmade, or meaningful? We’d love to receive it—there’s space in our hearts and home for all your love.</p>
+          
+          {/* Map Section */}
+              <motion.section className="text-center" {...zoomIn}>
+                <p className="mb-2 text-sm my-6">[Tap or click the map for navigation ↓]</p>
+                <a
+                  href="https://maps.app.goo.gl/FYigzzmmvCuAaLpa6"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ display: 'inline-block'}}
+                >
+                  <Image
+                    src="/hand-drawn-map.png"
+                    alt="Hand-drawn map to venue"
+                    width={350}
+                    height={450}
+                    className="w-64 h-64 object-contain rounded-lg shadow-lg cursor-pointer border-2 border-emerald-300 mx-auto"
+                    style={{ background: '#fff' }}
+                    priority
+                  />
+                </a>
+              </motion.section>
+
+              {/* Second Poem Section */}
+              <motion.section className="text-center italic text-lg Edu-font my-3" {...fadeInRight}>
+                <p>
+                  True, gentle, fated, and timeless
+                  <br />
+                  the day that turns you and me into us
+                  <br />
+                  Where the hands we hold today
+                  <br />
+                  will be held all tomorrows
+                  <br />
+                  echoing our love forever
+                </p>
+              </motion.section>
+
+              {/* RSVP Section */}
+              <motion.section {...fadeInRight}>
+                <h2 className="text-4xl font-bold text-center fancy-font mb-4 my-10">Repondez s'il Vous Plait</h2>
+                <form
+                  className="space-y-4 text-sm"
+                  onSubmit={(e) => {
+                    e.preventDefault();
+                    const form = e.target as HTMLFormElement;
+                    const name = (form.elements.namedItem("name") as HTMLInputElement).value;
+                    const telephone = (form.elements.namedItem("telephone") as HTMLInputElement).value;
+                    const pax = (form.elements.namedItem("pax") as HTMLInputElement).value;
+
+                    const promise = fetch("/api/rsvp", {
+                      method: "POST",
+                      headers: {
+                        "Content-Type": "application/json",
+                      },
+                      body: JSON.stringify({ name, telephone, pax: parseInt(pax) }),
+                    }).then((res) => {
+                      if (!res.ok) {
+                        throw new Error("Failed to submit RSVP.");
+                      }
+                      return res.json();
+                    });
+
+                    toast.promise(promise, {
+                      loading: "Submitting RSVP...",
+                      success: () => {
+                        form.reset();
+                        return "RSVP submitted successfully!";
+                      },
+                      error: "Failed to submit RSVP.",
+                    });
+                  }}
+                >
+                  <div>
+                    <label htmlFor="name" className="block text-xs font-medium text-gray-700">Name</label>
+                    <input type="text" id="name" name="name" className="mt-1 block w-full px-2 py-1 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-emerald-500 focus:border-emerald-500"/>
+                  </div>
+                  <div>
+                    <label htmlFor="telephone" className="block text-xs font-medium text-gray-700">Telephone</label>
+                    <input type="tel" id="telephone" name="telephone" className="mt-1 block w-full px-2 py-1 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-emerald-500 focus:border-emerald-500"/>
+                  </div>
+                  <div>
+                    <label htmlFor="pax" className="block text-xs font-medium text-gray-700">No. of people:</label>
+                    <input type="number" id="pax" name="pax" min="1" className="mt-1 block w-full px-2 py-1 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-emerald-500 focus:border-emerald-500"/>
+                  </div>
+                  <p className="text-center mb-4 text-xs"><br></br>Kindly RSVP by Nov 1st, 2025</p>
+                  <div className="text-center pt-2">
+                    <button type="submit" className="px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-emerald-500 hover:bg-emerald-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500">
+                      RSVP Now
+                    </button>
+                  </div>
+                </form>
+              </motion.section>
+
                 <motion.p className="text-base text-justify Edu-font pt-4 leading-[1.8]" {...fadeInRight}>
                   Thank you for being a part of this beautiful journey with us. Whether it’s your blessings, your presence, or a thoughtful contribution, we are truly grateful. This celebration is as much about family and friendship as it is about the two of us.
                 </motion.p>
@@ -452,7 +453,15 @@ export default function Home() {
         ) : (
           <div className="relative mx-auto border-gray-800 dark:border-gray-800 bg-gray-800 border-[14px] rounded-[2.5rem] h-[800px] w-[400px] shadow-xl">
             <div className="w-[140px] h-[18px] bg-gray-800 top-0 rounded-b-[1rem] left-1/2 -translate-x-1/2 absolute"></div>
-            <div className="rounded-[2rem] no-scrollbar overflow-y-auto scrollbar-hide h-full bg-lime-50 font-serif text-gray-800">
+              <div
+                className="rounded-[2rem] no-scrollbar overflow-y-auto scrollbar-hide h-full font-serif text-gray-800"
+                style={{
+                  backgroundImage: "url('/final-images/inner-bg.jpg')",
+                  backgroundRepeat: "repeat-y",
+                  backgroundSize: "100% auto",
+                  backgroundPosition: "top center",
+                }}
+              >
               {weddingContent}
             </div>
           </div>
