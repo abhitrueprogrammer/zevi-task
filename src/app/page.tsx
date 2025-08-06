@@ -4,6 +4,8 @@ import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import { motion, easeOut, easeIn } from "framer-motion";
+import { url } from "inspector";
+import { urlToHttpOptions } from "url";
 
 export default function Home() {
   const [isMobile, setIsMobile] = useState(false);
@@ -79,10 +81,23 @@ export default function Home() {
 
   const weddingContent = (
     <div className="p-8 space-y-12">
-      {/* Hero Section */}
-      <motion.section className="text-center" {...fadeInDown}>
+      {/* Hero Section */}       
+        {/* Heart */}
+        <div className="flex items-center justify-center">
+          <Image
+            src="/final-images/heart.png"
+            alt="heart"
+            width={100}
+            height={100}
+            className="object-cover rounded-lg"
+            onContextMenu={(e) => e.preventDefault()}
+            priority
+          />
+        </div>
+
+      <motion.section className="text-center" {...fadeInUp}>
         <div className="flex flex-col items-center">
-          <h1 className="text-5xl font-extrabold text-emerald-600 mb-4 mt-4 fancy-font">Our Wedding!</h1>
+          <h1 className="text-5xl font-extrabold text-emerald-600 mb-4 fancy-font">Our Wedding!</h1>
         </div>
         <p className="mt-4 text-lg italic Edu-font">
           Join us in happiness, laughter, and light!
@@ -117,19 +132,16 @@ export default function Home() {
       <motion.section className="text-center" {...fadeInUp}>
         <div className="flex flex-col my-6">
           {/* Groom */}
-          <div className="flex flex-col items-start leading-relaxed mb-6">
-            <p className="text-3xl BeauRivage-font tracking-wider font-semibold text-emerald-700 text-left">
-              Eshwar K Manasijan
-            </p>
+          <div className="flex flex-col items-center leading-relaxed mb-6">
+            <p className="text-4xl fancy-font tracking-wider font-semibold text-emerald-600 text-center">
+              Eshwar  K Manasijan
+              </p>
           </div>
-          
-          {/* Heart */}
-          <span className="text-3xl px-2 my-0">❤️</span>
 
           {/* Bride */}
-            <div className="flex flex-col items-end leading-relaxed mt-6">
-              <p className="text-3xl BeauRivage-font tracking-wider font-semibold text-emerald-700 text-center">
-                Tejashwini Harish
+            <div className="flex flex-col items-center leading-relaxed mt-6">
+              <p className="text-4xl fancy-font tracking-wider font-semibold text-emerald-600 text-center">
+                Tejashwini H
               </p>
             </div>
           </div>
@@ -155,27 +167,18 @@ export default function Home() {
 
       {/* Schedule Section */}
       <motion.section {...fadeInLeft}>
-        <h2 className="text-2xl font-bold text-center mb-4">THE EXALTED DAYS</h2>
-          <div className="grid grid-cols-1 gap-6 text-sm">
-          <div className="border-l-4 border-emerald-300 pl-4">
-          <h3 className="text-xl font-semibold mb-2">15th November</h3>
-            <ul className="space-y-1">
-              <li><span className="font-bold">04:00pm</span> - Onset of the event</li>
-              <li><span className="font-bold">04:45pm - 05:45pm</span> - Engagement</li>
-              <li><span className="font-bold">6.00pm</span> – Reception</li>
-              <li><span className="font-bold">7:00 pm</span> – Celebration Banquet</li>
-            </ul>
+        <h2 className="text-2xl font-bold text-center mb-4 my-3">THE EXALTED DAYS</h2>
+          <div className="my-10">
+            <Image
+            src="/final-images/exalted-days.png"
+            alt="Exalted Days"
+            width={300}
+            height={380}
+            className="scale-110"
+            priority
+            />
           </div>
-          <div className="border-l-4 border-emerald-300 pl-4">
-            <h3 className="text-xl font-semibold mb-2">16th November</h3>
-            <ul className="space-y-1">
-              <li><span className="font-bold">From 07:45</span> - Breakfast</li>
-              <li><span className="font-bold">10:45 am - 11:45 am</span> – Muhurtham <span className="text-xs text-gray-500">(wedding time)</span></li>
-              <li><span className="font-bold">12:30</span> – Lunch</li>
-            </ul>
-          </div>
-        </div>
-      </motion.section>
+        </motion.section>
 
 {/* Calendar Image Section
       <div className="flex justify-center my-6">
@@ -206,7 +209,7 @@ export default function Home() {
       <motion.section className="text-center" {...fadeInRight}>
         <div className="my-6">
           <Image
-            src="/ghibli_2.png"
+            src="/final-images/forest-final.png"
             alt="Ghibli-style wedding image"
             width={400}
             height={128}
@@ -232,7 +235,7 @@ export default function Home() {
       <motion.section className="text-sm" {...staggerContainer}>
         <motion.h2 className="text-2xl font-bold text-center mb-4" {...fadeInRight}>GIFT REGISTRY</motion.h2>
         <div className="text-left space-y-6 leading-relaxed">
-          <motion.p className="text-base text-justify space-y-10 leading-[1.8]" {...fadeInRight}>
+          <motion.p className="text-base Edu-font text-justify space-y-10 leading-[1.8]" {...fadeInRight}>
             Dear Family &amp; Friends,<br />
             &emsp;&emsp;Your presence is the most precious gift we could ask for, and if you wish to bless us with something extra, we&apos;ve put together a thoughtful gift registry. 
             <br />&emsp;&emsp;Each option is meaningful to us, rooted in tradition, growth, and heartfelt memories.
@@ -240,19 +243,19 @@ export default function Home() {
           </motion.p>
           <motion.div {...fadeInRight}>
             <h3 className="text-lg font-semibold mb-1 leading-[1.8]">Gift with Tradition</h3>
-            <p className="text-base text-justify leading-[1.8]">&emsp;&emsp;If you prefer to bless us with a precious metal or cash gift, we deeply appreciate it. You can hand it over during the event.</p>
+            <p className="text-base Edu-font text-justify leading-[1.8]">&emsp;&emsp;If you prefer to bless us with a precious metal or cash gift, we deeply appreciate it. You can hand it over during the event.</p>
           </motion.div>
           <motion.div {...fadeInRight}>
             <h3 className="text-lg font-semibold mb-1">Invest in Us</h3>
-            <p className="text-base">Digital Bullion:</p>
-            <ul className="list-disc list-inside ml-4 text-base leading-[1.8]">
+            <p className="Edu-font text-base">Digital Bullion:</p>
+            <ul className="list-disc list-inside ml-4 Edu-font text-base leading-[1.8]">
               <li><a href="https://www.caratlane.com/caratlane-digital-gold?srsltid=AfmBOoqcyKK0Gh8cFi2qbf8CT1CH1SLzQ5U7-dBGOZfXxhNl6U5C7JGw" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:underline">Click here to gift digital gold</a></li>
               <li><a href="https://www.youtube.com/watch?v=IxX_QHay02M&list=RDIxX_QHay02M&start_radio=1">Please click the link below</a></li>
             </ul>
           </motion.div>
           <motion.div {...fadeInRight}>
             <h3 className="text-lg font-semibold mb-1">Gift from the Heart</h3>
-            <p className="text-base">Share your blessings & memories!</p>
+            <p className="Edu-font text-base">Share your blessings & memories!</p>
             <input
               type="text"
               id="gift-message-name"
@@ -396,7 +399,7 @@ export default function Home() {
                   </div>
                   <p className="text-center mb-4 text-xs"><br></br>Kindly RSVP by Nov 1st, 2025</p>
                   <div className="text-center pt-2">
-                    <button type="submit" className="px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-emerald-500 hover:bg-emerald-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500">
+                    <button type="submit" className="px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-[#3c9e5e] hover:bg-[#2b7445] transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500">
                       RSVP Now
                     </button>
                   </div>
@@ -420,7 +423,7 @@ export default function Home() {
     <main
       className="flex flex-col items-center justify-center min-h-screen p-4"
       style={{
-        backgroundImage: 'url()',
+        backgroundImage: 'url(https://i.pinimg.com/1200x/c0/a4/7a/c0a47aac651b602e2db89164dcadd952.jpg)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
@@ -447,7 +450,7 @@ export default function Home() {
               <div
                 className="rounded-[2rem] no-scrollbar overflow-y-auto scrollbar-hide h-full font-serif text-gray-800"
                 style={{
-                  backgroundImage: "url(https://i.pinimg.com/736x/06/b6/75/06b675d52c66d0c1af49fd4054d515a1.jpg)",
+                  backgroundImage: "url(https://i.pinimg.com/736x/d7/77/37/d77737cae1098d5453573c53250f0d1c.jpg)",
                   backgroundRepeat: "repeat-y",
                   backgroundSize: "100% auto",
                   backgroundPosition: "top center",
