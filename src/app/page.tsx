@@ -166,7 +166,7 @@ export default function Home() {
       </motion.section>
 
       {/* Schedule Section */}
-      <motion.section {...fadeInLeft}>
+      <motion.section {...fadeInUp}>
         <h2 className="text-2xl font-bold text-center mb-4 my-3">THE EXALTED DAYS</h2>
           <div className="my-10">
             <Image
@@ -193,7 +193,7 @@ export default function Home() {
       </div>
  */}
       {/* Poem Section */}
-      <motion.section className="text-center italic text-lg Edu-font" {...fadeInRight}>
+      <motion.section className="text-center italic text-lg Edu-font" {...fadeInUp}>
         <p>
           A wedding promise both gentle and grand,
           <br />
@@ -206,14 +206,14 @@ export default function Home() {
       </motion.section>
 
       {/* Image and Quote Section */}
-      <motion.section className="text-center" {...fadeInRight}>
+      <motion.section className="text-center" {...fadeInUp}>
         <div className="my-6">
           <Image
             src="/final-images/forest-final.png"
             alt="Ghibli-style wedding image"
             width={400}
             height={128}
-            className="w-full h-32 object-cover rounded-lg shadow-lg border border-emerald-200"
+            className="w-full h-32 object-bottom object-cover rounded-lg shadow-lg border border-emerald-200"
             onContextMenu={(e) => e.preventDefault()}
             priority
           />
@@ -233,19 +233,19 @@ export default function Home() {
 
       {/* Gift Registry Section - fade in each subsection */}
       <motion.section className="text-sm" {...staggerContainer}>
-        <motion.h2 className="text-2xl font-bold text-center mb-4" {...fadeInRight}>GIFT REGISTRY</motion.h2>
+        <motion.h2 className="text-2xl font-bold text-center mb-4" {...fadeInUp}>GIFT REGISTRY</motion.h2>
         <div className="text-left space-y-6 leading-relaxed">
-          <motion.p className="text-base Edu-font text-justify space-y-10 leading-[1.8]" {...fadeInRight}>
+          <motion.p className="text-base Edu-font text-justify space-y-10 leading-[1.8]" {...fadeInUp}>
             Dear Family &amp; Friends,<br />
             &emsp;&emsp;Your presence is the most precious gift we could ask for, and if you wish to bless us with something extra, we&apos;ve put together a thoughtful gift registry. 
             <br />&emsp;&emsp;Each option is meaningful to us, rooted in tradition, growth, and heartfelt memories.
             <br />Feel free to choose what resonates most with you.
           </motion.p>
-          <motion.div {...fadeInRight}>
+          <motion.div {...fadeInUp}>
             <h3 className="text-lg font-semibold mb-1 leading-[1.8]">Gift with Tradition</h3>
             <p className="text-base Edu-font text-justify leading-[1.8]">&emsp;&emsp;If you prefer to bless us with a precious metal or cash gift, we deeply appreciate it. You can hand it over during the event.</p>
           </motion.div>
-          <motion.div {...fadeInRight}>
+          <motion.div {...fadeInUp}>
             <h3 className="text-lg font-semibold mb-1">Invest in Us</h3>
             <p className="Edu-font text-base">Digital Bullion:</p>
             <ul className="list-disc list-inside ml-4 Edu-font text-base leading-[1.8]">
@@ -253,7 +253,7 @@ export default function Home() {
               <li><a href="https://www.youtube.com/watch?v=IxX_QHay02M&list=RDIxX_QHay02M&start_radio=1">Please click the link below</a></li>
             </ul>
           </motion.div>
-          <motion.div {...fadeInRight}>
+          <motion.div {...fadeInUp}>
             <h3 className="text-lg font-semibold mb-1">Gift from the Heart</h3>
             <p className="Edu-font text-base">Share your blessings & memories!</p>
             <input
@@ -310,7 +310,7 @@ export default function Home() {
               </button>
             </div>
           </motion.div>
-          <motion.div {...fadeInRight}>
+          <motion.div {...fadeInUp}>
             <h3 className="text-lg Edu-font font-semibold mb-1 leading-[1.8]">Something Personal or Handmade?</h3>
             <p className="text-base text-justify Edu-font leading-[1.8]">Have something special, handmade, or meaningful? We’d love to receive it—there’s space in our hearts and home for all your love.</p>
           
@@ -336,7 +336,7 @@ export default function Home() {
               </motion.section>
 
               {/* Second Poem Section */}
-              <motion.section className="text-center italic text-lg Edu-font my-3" {...fadeInRight}>
+              <motion.section className="text-center italic text-lg Edu-font my-3" {...fadeInUp}>
                 <p>
                   True, gentle, fated, and timeless
                   <br />
@@ -351,7 +351,7 @@ export default function Home() {
               </motion.section>
 
               {/* RSVP Section */}
-              <motion.section {...fadeInRight}>
+              <motion.section {...fadeInUp}>
                 <h2 className="text-4xl font-bold text-center fancy-font mb-4 my-10">Repondez s&apos;il Vous Plait</h2>
                 <form
                   className="space-y-4 text-sm"
@@ -406,10 +406,10 @@ export default function Home() {
                 </form>
               </motion.section>
 
-                <motion.p className="text-base text-justify Edu-font pt-4 leading-[1.8]" {...fadeInRight}>
-                  Thank you for being a part of this beautiful journey with us. Whether it’s your blessings, your presence, or a thoughtful contribution, we are truly grateful. This celebration is as much about family and friendship as it is about the two of us.
+                <motion.p className="text-base text-justify Edu-font pt-4 leading-[1.8]" {...fadeInUp}>
+                  Thank you for being a part of this beautiful journey with us. Whether it’s your blessings, your presence, or a thoughtful contribution, we are truly grateful. This celebration is as much about family and friendship as it is about the two of us, and we feel elated to share this moment with you!
                 </motion.p>
-                <motion.p className="text-xl text-center font-semibold text-md Edu-font leading-[1.8] mt-6" {...fadeInRight}>
+                <motion.p className="text-xl text-center font-semibold text-md Edu-font leading-[1.8] mt-6" {...fadeInUp}>
                   With love,<br />
                   The-soon-to-be Mister and Missus
                 </motion.p>
@@ -448,9 +448,8 @@ export default function Home() {
           <div className="relative mx-auto border-gray-800 dark:border-gray-800 bg-gray-800 border-[14px] rounded-[2.5rem] h-[800px] w-[400px] shadow-xl">
             <div className="w-[140px] h-[18px] bg-gray-800 top-0 rounded-b-[1rem] left-1/2 -translate-x-1/2 absolute"></div>
               <div
-                className="rounded-[2rem] no-scrollbar overflow-y-auto scrollbar-hide h-full font-serif text-gray-800"
+                className="bg-[url('/final-images/inner-background.jpg')] bg-cover bg-center rounded-[2rem] no-scrollbar overflow-y-auto scrollbar-hide h-full font-serif text-gray-800"
                 style={{
-                  backgroundImage: "url(https://i.pinimg.com/736x/d7/77/37/d77737cae1098d5453573c53250f0d1c.jpg)",
                   backgroundRepeat: "repeat-y",
                   backgroundSize: "100% auto",
                   backgroundPosition: "top center",
