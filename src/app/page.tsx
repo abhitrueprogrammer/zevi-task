@@ -119,7 +119,7 @@ export default function Home() {
             priority
           />
         </div>
-        {/*
+        {/* Supposed to float above the first image
         <div className="flex flex-col items-center text-sm my-4 space-y-2">
           <span>🍷 “Come support the couple!”</span>
           <span>🍽️ “Let’s feast together!”</span>
@@ -144,6 +144,7 @@ export default function Home() {
                 Tejashwini H
               </p>
             </div>
+          
           </div>
           <p className="text-lg italic Edu-font">
           <br />
@@ -212,8 +213,8 @@ export default function Home() {
             src="/final-images/forest-final.png"
             alt="Ghibli-style wedding image"
             width={400}
-            height={128}
-            className="w-full h-32 object-bottom object-cover rounded-lg shadow-lg border border-emerald-200"
+            height={200}
+            className="w-full h-48 object-cover object-[center_80%] rounded-lg shadow-lg border border-emerald-200"
             onContextMenu={(e) => e.preventDefault()}
             priority
           />
@@ -321,14 +322,14 @@ export default function Home() {
                   href="https://maps.app.goo.gl/FYigzzmmvCuAaLpa6"
                   target="_blank"
                   rel="noopener noreferrer"
-                  style={{ display: 'inline-block'}}
+                  className="inline-block my-6"
                 >
                   <Image
                     src="/hand-drawn-map.png"
                     alt="Hand-drawn map to venue"
-                    width={350}
-                    height={450}
-                    className="w-64 h-64 object-contain rounded-lg shadow-lg cursor-pointer border-2 border-emerald-300 mx-auto"
+                    width={256}
+                    height={256}
+                    className="w-64 h-64 object-contain rounded-full shadow-lg cursor-pointer border-2 border-emerald-300 mx-auto"
                     style={{ background: '#fff' }}
                     priority
                   />
@@ -406,9 +407,24 @@ export default function Home() {
                 </form>
               </motion.section>
 
-                <motion.p className="text-base text-justify Edu-font pt-4 leading-[1.8]" {...fadeInUp}>
-                  Thank you for being a part of this beautiful journey with us. Whether it’s your blessings, your presence, or a thoughtful contribution, we are truly grateful. This celebration is as much about family and friendship as it is about the two of us, and we feel elated to share this moment with you!
+              <div
+                className="p-6 my-8 bg-transparent object-fill rounded-xl shadow-lg text-center max-w-xl mx-auto"
+                style={{
+                  border: '16px solid transparent',
+                  borderImage: 'url(/final-images/final-textbox.png) 40 round',
+                }}
+              >
+                <motion.p
+                  className="text-base text-justify Edu-font leading-[1.8]"
+                  {...fadeInUp}
+                >
+                  Thank you for being a part of this beautiful journey with us. Whether it’s
+                  your blessings, your presence, or a thoughtful contribution, we are truly
+                  grateful. This celebration is as much about family and friendship as it is
+                  about the two of us, and we feel elated to share this moment with you!
                 </motion.p>
+              </div>
+              
                 <motion.p className="text-xl text-center font-semibold text-md Edu-font leading-[1.8] mt-6" {...fadeInUp}>
                   With love,<br />
                   The-soon-to-be Mister and Missus
@@ -448,8 +464,9 @@ export default function Home() {
           <div className="relative mx-auto border-gray-800 dark:border-gray-800 bg-gray-800 border-[14px] rounded-[2.5rem] h-[800px] w-[400px] shadow-xl">
             <div className="w-[140px] h-[18px] bg-gray-800 top-0 rounded-b-[1rem] left-1/2 -translate-x-1/2 absolute"></div>
               <div
-                className="bg-[url('/final-images/inner-background.jpg')] bg-cover bg-center rounded-[2rem] no-scrollbar overflow-y-auto scrollbar-hide h-full font-serif text-gray-800"
+                className="rounded-[2rem] no-scrollbar overflow-y-auto scrollbar-hide h-full font-serif text-gray-800"
                 style={{
+                  backgroundImage: "url(https://i.pinimg.com/736x/d7/77/37/d77737cae1098d5453573c53250f0d1c.jpg)",
                   backgroundRepeat: "repeat-y",
                   backgroundSize: "100% auto",
                   backgroundPosition: "top center",
