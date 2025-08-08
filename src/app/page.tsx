@@ -82,10 +82,12 @@ export default function Home() {
   const weddingContent = (
     <div className="p-8 space-y-12">
       {/* Hero Section */}       
-        {/* Heart */}
+
+      <motion.section className="text-center" {...fadeInUp}>
+        <div className="flex flex-col items-center">
         <div className="my-10 flex items-center justify-center">
           <Image
-            src="/final-images/heart-final.png"
+            src="/final-images/heart-3.png"
             alt="heart"
             width={400}
             height={100}
@@ -94,10 +96,7 @@ export default function Home() {
             priority
           />
         </div>
-
-      <motion.section className="text-center" {...fadeInUp}>
-        <div className="flex flex-col items-center">
-          <h1 className="text-5xl font-extrabold text-emerald-600 mb-4 fancy-font">Our Wedding!</h1>
+          <h1 className="text-5xl font-extrabold text-emerald-600 mb-4 fancy-font my-8">Our Wedding!</h1>
         </div>
         <p className="mt-4 text-lg italic Edu-font">
           Join us in happiness, laughter, and light!
@@ -168,7 +167,7 @@ export default function Home() {
 
       {/* Schedule Section */}
       <motion.section {...fadeInUp}>
-        <h2 className="text-3xl font-bold parisienne-font text-center mb-4 my-3">The Exalted Days</h2>
+        <h2 className="text-2xl font-bold text-center mb-4 my-3">THE EXALTED DAYS</h2>
           <div className="my-10">
             <Image
             src="/final-images/exalted-days.png"
@@ -227,7 +226,7 @@ export default function Home() {
           alt="Ghibli-style wedding image"
           width={200}
           height={200}
-          className="scale-75 w-full h-8 object-cover object-[center]"
+          className="scale-90 w-full h-12 object-cover object-[center]"
           onContextMenu={(e) => e.preventDefault()}
           priority
         />
@@ -235,7 +234,7 @@ export default function Home() {
 
       {/* Gift Registry Section - fade in each subsection */}
       <motion.section className="text-sm" {...staggerContainer}>
-        <motion.h2 className="text-3xl font-bold fancy-font text-center mb-4" {...fadeInUp}>Gift Registry</motion.h2>
+        <motion.h2 className="text-2xl font-bold text-center mb-4" {...fadeInUp}>GIFT REGISTRY</motion.h2>
         <div className="text-left space-y-6 leading-relaxed">
           <motion.p className="text-base Edu-font text-justify space-y-10 leading-[1.8]" {...fadeInUp}>
             Dear Family &amp; Friends,<br />
@@ -252,7 +251,6 @@ export default function Home() {
             <p className="Edu-font text-base">Digital Bullion:</p>
             <ul className="list-disc list-inside ml-4 Edu-font text-base leading-[1.8]">
               <li><a href="https://www.caratlane.com/caratlane-digital-gold?srsltid=AfmBOoqcyKK0Gh8cFi2qbf8CT1CH1SLzQ5U7-dBGOZfXxhNl6U5C7JGw" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:underline">Click here to gift digital gold</a></li>
-              <li><a href="https://www.youtube.com/watch?v=IxX_QHay02M&list=RDIxX_QHay02M&start_radio=1" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:underline">Please click here for detailed instructions</a></li>
             </ul>
           </motion.div>
           <motion.div {...fadeInUp}>
@@ -430,20 +428,20 @@ export default function Home() {
                 </motion.p>
               </div>
               
-                <motion.div className="text-xl text-center font-semibold text-md Edu-font leading-[1.8] mt-6" {...fadeInUp}>
+                <motion.div className="text-2xl text-center font-semibold text-md Edu-font leading-[1.8] mt-6" {...fadeInUp}>
                   With love,<br />
-                    {/* Salutations */}
-                    <div className="flex items-center justify-center">
-                    <Image
-                      src="/final-images/mr-and-mrs.png"
-                      alt="Ghibli-style wedding image"
-                      width={200}
-                      height={200}
-                      className="scale-75 w-full h-32 object-cover object-[center]"
-                      onContextMenu={(e) => e.preventDefault()}
-                      priority
-                    />
-                    </div>
+                  {/* Salutations */}
+                  <div className="flex items-center justify-center">
+                  <Image
+                    src="/final-images/mr-mrs.png"
+                    alt="Ghibli-style wedding image"
+                    width={200}
+                    height={200}
+                    className="scale-75 w-full h-32 object-cover object-[center]"
+                    onContextMenu={(e) => e.preventDefault()}
+                    priority
+                  />
+                  </div>
                 </motion.div>
           </motion.div>
         </div>
