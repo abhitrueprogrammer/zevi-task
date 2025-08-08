@@ -132,14 +132,14 @@ export default function Home() {
         <div className="flex flex-col my-6">
           {/* Groom */}
           <div className="flex flex-col items-center leading-relaxed mb-6">
-            <p className="text-4xl fancy-font tracking-wider font-semibold text-emerald-600 text-center">
+            <p className="text-4xl meaculpa-font tracking-wider font-semibold text-emerald-600 text-center">
               Eshwar  K Manasijan
               </p>
           </div>
 
           {/* Bride */}
             <div className="flex flex-col items-center leading-relaxed mt-6">
-              <p className="text-4xl fancy-font tracking-wider font-semibold text-emerald-600 text-center">
+              <p className="text-4xl meaculpa-font tracking-wider font-semibold text-emerald-600 text-center">
                 Tejashwini H
               </p>
             </div>
@@ -195,7 +195,7 @@ export default function Home() {
 
       {/* Image and Quote Section */}
       <motion.section className="text-center" {...fadeInUp}>
-        <div className="my-6">
+        <div className="relative my-6">
           <Image
             src="/final-images/forest-final.png"
             alt="Ghibli-style wedding image"
@@ -205,7 +205,14 @@ export default function Home() {
             onContextMenu={(e) => e.preventDefault()}
             priority
           />
+          {/* Vignette overlay */}
+          <div className="absolute inset-0 rounded-lg pointer-events-none"
+              style={{
+                background: 'radial-gradient(circle, rgba(246,240,213,0) 50%, rgba(246,240,213,0.8) 100%)'
+              }}>
+          </div>
         </div>
+
         <p className="italic text-lg Edu-font">
           We met through life
           <br />
@@ -428,7 +435,7 @@ export default function Home() {
                 </motion.p>
               </div>
               
-                <motion.div className="text-2xl text-center font-semibold text-md Edu-font leading-[1.8] mt-6" {...fadeInUp}>
+                <motion.div className="text-4xl text-center font-semibold text-md meaculpa-font tracking-wider leading-[1.8] mt-6" {...fadeInUp}>
                   With love,<br />
                   {/* Salutations */}
                   <div className="flex items-center justify-center">

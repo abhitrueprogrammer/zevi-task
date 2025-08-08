@@ -33,14 +33,14 @@ body, .parisienne-font {
 }
 
 @font-face {
-  font-family: 'ruthie';
-  src: url('/fonts/Ruthie-Regular.ttf') format('truetype');
+  font-family: 'meaculpa';
+  src: url('/fonts/meaculpa.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
-body, .ruthie-font {
-  font-family: 'ruthie', serif;
+body, .meaculpa-font {
+  font-family: 'meaculpa', serif;
 }
 
 @tailwind base;
