@@ -22,14 +22,14 @@ body, .Edu-font {
 }
 
 @font-face {
-  font-family: 'BeauRivage';
-  src: url('/fonts/BeauRivage-Regular.ttf') format('truetype');
+  font-family: 'parisienne';
+  src: url('/fonts/parisienne.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
-body, .BeauRivage-font {
-  font-family: 'BeauRivage', serif;
+body, .parisienne-font {
+  font-family: 'parisienne', serif;
 }
 
 @font-face {

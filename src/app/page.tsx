@@ -83,13 +83,13 @@ export default function Home() {
     <div className="p-8 space-y-12">
       {/* Hero Section */}       
         {/* Heart */}
-        <div className="flex items-center justify-center">
+        <div className="my-10 flex items-center justify-center">
           <Image
-            src="/final-images/heart.png"
+            src="/final-images/heart-final.png"
             alt="heart"
-            width={100}
+            width={400}
             height={100}
-            className="object-cover rounded-lg"
+            className="w-full h-20 object-cover object-center rounded-lg"
             onContextMenu={(e) => e.preventDefault()}
             priority
           />
@@ -110,11 +110,11 @@ export default function Home() {
         </p>
         <div className="my-0">
           <Image
-            src="/final-images/engagement-final.png"
+            src="/final-images/engagement-final-2.png"
             alt="Ghibli-style wedding image"
             width={500}
             height={500}
-            className="scale-90 object-cover rounded-lg shadow-lg border border-emerald-200"
+            className="scale-90 object-cover"
             onContextMenu={(e) => e.preventDefault()}
             priority
           />
@@ -168,7 +168,7 @@ export default function Home() {
 
       {/* Schedule Section */}
       <motion.section {...fadeInUp}>
-        <h2 className="text-2xl font-bold text-center mb-4 my-3">THE EXALTED DAYS</h2>
+        <h2 className="text-3xl font-bold parisienne-font text-center mb-4 my-3">The Exalted Days</h2>
           <div className="my-10">
             <Image
             src="/final-images/exalted-days.png"
@@ -235,7 +235,7 @@ export default function Home() {
 
       {/* Gift Registry Section - fade in each subsection */}
       <motion.section className="text-sm" {...staggerContainer}>
-        <motion.h2 className="text-2xl font-bold text-center mb-4" {...fadeInUp}>GIFT REGISTRY</motion.h2>
+        <motion.h2 className="text-3xl font-bold fancy-font text-center mb-4" {...fadeInUp}>Gift Registry</motion.h2>
         <div className="text-left space-y-6 leading-relaxed">
           <motion.p className="text-base Edu-font text-justify space-y-10 leading-[1.8]" {...fadeInUp}>
             Dear Family &amp; Friends,<br />
@@ -245,14 +245,14 @@ export default function Home() {
           </motion.p>
           <motion.div {...fadeInUp}>
             <h3 className="text-lg font-semibold mb-1 leading-[1.8]">Gift with Tradition</h3>
-            <p className="text-base Edu-font text-justify leading-[1.8]">&emsp;&emsp;If you prefer to bless us with a precious metal or cash gift, we deeply appreciate it. You can hand it over during the event.</p>
+            <p className="text-base Edu-font text-justify leading-[1.8]">&emsp;&emsp;If you prefer to bless us with a precious metal or cash gift, we deeply appreciate it. You can do so during the event.</p>
           </motion.div>
           <motion.div {...fadeInUp}>
             <h3 className="text-lg font-semibold mb-1">Invest in Us</h3>
             <p className="Edu-font text-base">Digital Bullion:</p>
             <ul className="list-disc list-inside ml-4 Edu-font text-base leading-[1.8]">
               <li><a href="https://www.caratlane.com/caratlane-digital-gold?srsltid=AfmBOoqcyKK0Gh8cFi2qbf8CT1CH1SLzQ5U7-dBGOZfXxhNl6U5C7JGw" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:underline">Click here to gift digital gold</a></li>
-              <li><a href="https://www.youtube.com/watch?v=IxX_QHay02M&list=RDIxX_QHay02M&start_radio=1">Please click here for detailed instructions</a></li>
+              <li><a href="https://www.youtube.com/watch?v=IxX_QHay02M&list=RDIxX_QHay02M&start_radio=1" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:underline">Please click here for detailed instructions</a></li>
             </ul>
           </motion.div>
           <motion.div {...fadeInUp}>
