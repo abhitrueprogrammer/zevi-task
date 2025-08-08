@@ -181,18 +181,6 @@ export default function Home() {
           </div>
         </motion.section>
 
-{/* Calendar Image Section
-      <div className="flex justify-center my-6">
-        <Image
-          src="/final-images/calendar.png"
-          alt="November 2025 Wedding Calendar"
-          width={300}
-          height={380}
-          className="scale-90 rounded-lg shadow-lg border border-emerald-200"
-          priority
-        />
-      </div>
- */}
       {/* Poem Section */}
       <motion.section className="text-center italic text-lg Edu-font" {...fadeInUp}>
         <p>
@@ -232,6 +220,19 @@ export default function Home() {
         </p>
       </motion.section>
 
+        {/* Line */}
+        <div className="flex items-center justify-center">
+        <Image
+          src="/final-images/line.png"
+          alt="Ghibli-style wedding image"
+          width={200}
+          height={200}
+          className="scale-75 w-full h-8 object-cover object-[center]"
+          onContextMenu={(e) => e.preventDefault()}
+          priority
+        />
+        </div>
+
       {/* Gift Registry Section - fade in each subsection */}
       <motion.section className="text-sm" {...staggerContainer}>
         <motion.h2 className="text-2xl font-bold text-center mb-4" {...fadeInUp}>GIFT REGISTRY</motion.h2>
@@ -251,7 +252,7 @@ export default function Home() {
             <p className="Edu-font text-base">Digital Bullion:</p>
             <ul className="list-disc list-inside ml-4 Edu-font text-base leading-[1.8]">
               <li><a href="https://www.caratlane.com/caratlane-digital-gold?srsltid=AfmBOoqcyKK0Gh8cFi2qbf8CT1CH1SLzQ5U7-dBGOZfXxhNl6U5C7JGw" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:underline">Click here to gift digital gold</a></li>
-              <li><a href="https://www.youtube.com/watch?v=IxX_QHay02M&list=RDIxX_QHay02M&start_radio=1">Please click the link below</a></li>
+              <li><a href="https://www.youtube.com/watch?v=IxX_QHay02M&list=RDIxX_QHay02M&start_radio=1">Please click here for detailed instructions</a></li>
             </ul>
           </motion.div>
           <motion.div {...fadeInUp}>
@@ -313,7 +314,7 @@ export default function Home() {
           </motion.div>
           <motion.div {...fadeInUp}>
             <h3 className="text-lg Edu-font font-semibold mb-1 leading-[1.8]">Something Personal or Handmade?</h3>
-            <p className="text-base text-justify Edu-font leading-[1.8]">Have something special, handmade, or meaningful? We’d love to receive it—there’s space in our hearts and home for all your love.</p>
+            <p className="text-base text-justify Edu-font leading-[1.8]">Got something handmade, heartfelt, or meaningful? We would be honored to receive it as your love will always have a place in our hearts and home.</p>
           
           {/* Map Section */}
               <motion.section className="text-center" {...zoomIn}>
@@ -406,14 +407,18 @@ export default function Home() {
                   </div>
                 </form>
               </motion.section>
+                <div
+                  className="p-6 my-8 bg-transparent object-fill text-center max-w-xl mx-auto"
+                  style={{
+                    borderWidth: '16px 28px',
+                    borderStyle: 'solid',
+                    borderColor: 'transparent',
+                    borderImageSource: 'url(/final-images/textbox.png)',
+                    borderImageSlice: '80 150',
+                    borderImageRepeat: 'round'
+                  }}
+                >
 
-              <div
-                className="p-6 my-8 bg-transparent object-fill rounded-xl shadow-lg text-center max-w-xl mx-auto"
-                style={{
-                  border: '16px solid transparent',
-                  borderImage: 'url(/final-images/final-textbox.png) 40 round',
-                }}
-              >
                 <motion.p
                   className="text-base text-justify Edu-font leading-[1.8]"
                   {...fadeInUp}
@@ -425,10 +430,21 @@ export default function Home() {
                 </motion.p>
               </div>
               
-                <motion.p className="text-xl text-center font-semibold text-md Edu-font leading-[1.8] mt-6" {...fadeInUp}>
+                <motion.div className="text-xl text-center font-semibold text-md Edu-font leading-[1.8] mt-6" {...fadeInUp}>
                   With love,<br />
-                  The-soon-to-be Mister and Missus
-                </motion.p>
+                    {/* Salutations */}
+                    <div className="flex items-center justify-center">
+                    <Image
+                      src="/final-images/mr-and-mrs.png"
+                      alt="Ghibli-style wedding image"
+                      width={200}
+                      height={200}
+                      className="scale-75 w-full h-32 object-cover object-[center]"
+                      onContextMenu={(e) => e.preventDefault()}
+                      priority
+                    />
+                    </div>
+                </motion.div>
           </motion.div>
         </div>
       </motion.section>
