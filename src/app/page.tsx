@@ -129,22 +129,18 @@ export default function Home() {
 
       {/* Invitation Section */}
       <motion.section className="text-center" {...fadeInUp}>
-        <div className="flex flex-col my-6">
+        <div className="flex flex-col items-center leading-relaxed gap-2 overflow-visible">
           {/* Groom */}
-          <div className="flex flex-col items-center leading-relaxed mb-6">
-            <p className="text-4xl meaculpa-font tracking-wider font-semibold text-emerald-600 text-center">
-              Eshwar  K Manasijan
-              </p>
-          </div>
+          <p className="text-3xl meaculpa-font tracking-wider font-semibold text-center 
+                        bg-gradient-to-r from-black via-[#c6a801] to-[#ffdc3e] 
+                        bg-clip-text text-transparent leading-[1.8] pt-2 pb-2 px-2 
+                        overflow-visible inline-block">
+            Eshwar K.&nbsp;Manasijan
+            <br />
+            Tejashwini H
+          </p>
+        </div>
 
-          {/* Bride */}
-            <div className="flex flex-col items-center leading-relaxed mt-6">
-              <p className="text-4xl meaculpa-font tracking-wider font-semibold text-emerald-600 text-center">
-                Tejashwini H
-              </p>
-            </div>
-          
-          </div>
           <p className="text-lg italic Edu-font">
           <br />
           In this lifetime, what a joy it’s been
@@ -170,7 +166,7 @@ export default function Home() {
         <h2 className="text-2xl font-bold text-center mb-4 my-3">THE EXALTED DAYS</h2>
           <div className="my-10">
             <Image
-            src="/final-images/exalted-days.png"
+            src="/final-images/schedule.png"
             alt="Exalted Days"
             width={300}
             height={380}
@@ -436,7 +432,6 @@ export default function Home() {
               </div>
               
                 <motion.div className="text-4xl text-center font-semibold text-md meaculpa-font tracking-wider leading-[1.8] mt-6" {...fadeInUp}>
-                  With love,<br />
                   {/* Salutations */}
                   <div className="flex items-center justify-center">
                   <Image
