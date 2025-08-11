@@ -9,6 +9,40 @@
 body, .fancy-font {
   font-family: 'Fancy', serif;
 }
+
+@font-face {
+  font-family: 'Edu';
+  src: url('/fonts/Edu_NSW_ACt_Cursive/Edu_NSW_ACt_Cursive-VariableFont_wght.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body, .Edu-font {
+  font-family: 'Edu', serif;
+}
+
+@font-face {
+  font-family: 'parisienne';
+  src: url('/fonts/parisienne.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body, .parisienne-font {
+  font-family: 'parisienne', serif;
+}
+
+@font-face {
+  font-family: 'meaculpa';
+  src: url('/fonts/meaculpa.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body, .meaculpa-font {
+  font-family: 'meaculpa', serif;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
