@@ -219,111 +219,6 @@ export default function Home() {
         </p>
       </motion.section>
 
-      {/* RSVP Section */}
-      <motion.section {...fadeInRight}>
-        <h2 className="text-2xl font-bold text-center mb-4">RSVP</h2>
-        <p className="text-center mb-4 text-sm">Kindly RSVP by Nov 1st, 2025</p>
-        <form
-          className="space-y-3 text-sm"
-          onSubmit={(e) => {
-            e.preventDefault();
-            const form = e.target as HTMLFormElement;
-            const name = (
-              form.elements.namedItem("name") as HTMLInputElement | null
-            )?.value;
-            const telephone = (
-              form.elements.namedItem("telephone") as HTMLInputElement | null
-            )?.value;
-            const pax = (
-              form.elements.namedItem("pax") as HTMLInputElement | null
-            )?.value;
-
-            if (!name || !telephone || !pax) {
-              toast.error("Please fill in all required fields.");
-              return;
-            }
-
-            const promise = fetch("/api/rsvp", {
-              method: "POST",
-              headers: {
-                "Content-Type": "application/json",
-              },
-              body: JSON.stringify({ name, telephone, pax: parseInt(pax) }),
-            }).then((res) => {
-              if (!res.ok) {
-                throw new Error("Failed to submit RSVP.");
-              }
-              return res.json();
-            });
-
-            toast.promise(promise, {
-              loading: "Submitting RSVP...",
-              success: () => {
-                form.reset();
-                return "RSVP submitted successfully!";
-              },
-              error: "Failed to submit RSVP.",
-            });
-          }}
-        >
-          <div>
-            <label
-              htmlFor="name"
-              className="block text-xs font-medium text-gray-700"
-            >
-              Name
-            </label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              required
-              className="mt-1 block w-full px-2 py-1 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-emerald-500 focus:border-emerald-500"
-            />
-          </div>
-          <div>
-            <label
-              htmlFor="telephone"
-              className="block text-xs font-medium text-gray-700"
-            >
-              Telephone
-            </label>
-            <input
-              type="tel"
-              id="telephone"
-              name="telephone"
-              required
-              className="mt-1 block w-full px-2 py-1 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-emerald-500 focus:border-emerald-500"
-            />
-          </div>
-          <div>
-            <label
-              htmlFor="pax"
-              className="block text-xs font-medium text-gray-700"
-            >
-              No. of people:
-            </label>
-            <input
-              type="number"
-              id="pax"
-              name="pax"
-              min="1"
-              step={1}
-              required
-              className="mt-1 block w-full px-2 py-1 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-emerald-500 focus:border-emerald-500"
-            />
-          </div>
-          <div className="text-center pt-2">
-            <button
-              type="submit"
-              className="px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-emerald-500 hover:bg-emerald-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500"
-            >
-              RSVP Now
-            </button>
-          </div>
-        </form>
-      </motion.section>
-
       {/* Image and Quote Section */}
       <motion.section className="text-center" {...fadeInUp}>
         <div className="relative my-6">
@@ -785,6 +680,7 @@ export default function Home() {
         position: "relative",
       }}
     >
+      <audio src="/bg-music.mp3" autoPlay loop />
       <div
         style={{
           position: "absolute",
